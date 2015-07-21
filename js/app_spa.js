@@ -2,10 +2,7 @@
 
 (function () {
     /* ---------------------------------- Variables locales ---------------------------------- */
-   //var adapter = new WebSqlAdapter();
-    //var adapter = new MemoryAdapter();
-   // var adapter = new JSONPAdapter();
-    var adapter = new LocalStorageAdapter();
+   var adapter = new WebSqlAdapter();
  /*   adapter.inicializar().done(function () {
         console.log("Inicializado: Adaptador de datos");
     });*/
