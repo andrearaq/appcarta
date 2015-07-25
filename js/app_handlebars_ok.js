@@ -2,13 +2,8 @@
 
 (function () {
     /* ---------------------------------- Variables locales ---------------------------------- */
-   //var adapter = new WebSqlAdapter();
-    //var adapter = new MemoryAdapter();
-   // var adapter = new JSONPAdapter();
-    var adapter = new LocalStorageAdapter();
- /*   adapter.inicializar().done(function () {
-        console.log("Inicializado: Adaptador de datos");
-    });*/
+   var adapter = new WebSqlAdapter();
+    
     adapter.inicializar().done(function () {
         console.log("Inicializado: Adaptador de datos");
         renderHomeView();
@@ -27,11 +22,7 @@
           };
         }
     }, false);
-  /*  $('#btnBuscar').on('keyup', encontrarPorNombre);*/
- /*   $('#btnAyuda').on('click', function() {
-        alert("Una ayuda nunca viene mal :-)")
-    });*/
-
+  
 
     /* ---------------------------------- Funciones locales ---------------------------------- */
     /* funciona para handlebars */

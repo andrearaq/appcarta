@@ -1,10 +1,26 @@
-  {{#.}}
-    <li class="topcoat-list__item">
-      <a href="#futbolistas/{{id}}">
-            <img src="img/categorias/{{imagen}}">
-            <p>{{nombre}} {{apellido}}</p>
-            <p>{{equipo}}</p>
-            <span class="chevron"></span>
-        </a>
-      </li>
-    {{/.}}
+<div class="topcoat-navigation-bar">
+        <div class="topcoat-navigation-bar__item left quarter">
+            <a class="topcoat-icon-button--quiet back-button" href="#">
+                <span class="topcoat-icon topcoat-icon--back"></span>
+            </a>
+        </div>
+        <div class="topcoat-navigation-bar__item center half">
+            <h1 class="topcoat-navigation-bar__title">Categorías</h1>
+        </div>
+</div>
+
+<div class="topcoat-list">
+     <div class="topcoat-list scroller">
+        <ul class="topcoat-list__container list" id="lstCategorias">
+            {{#.}}
+                <li class="topcoat-list__item">
+                  <a href="#categoria/{{cid}}">
+                    <p>{{nomcateg}}</p>
+                    <img src="img/categorias/{{cimagen}}">   
+                    <span class="chevron"></span>
+                </a>
+                </li>
+            {{/.}}
+         </ul>
+    </div>
+</div>

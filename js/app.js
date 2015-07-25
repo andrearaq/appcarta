@@ -3,13 +3,10 @@
 (function () {
     /* ---------------------------------- Variables locales ---------------------------------- */
    var adapter = new WebSqlAdapter();
-    //var adapter = new MemoryAdapter();
-   // var adapter = new JSONPAdapter();
-    //var adapter = new LocalStorageAdapter();
-    var futbolistaURL = /^#futbolistas\/(\d{1,})/;
+    var categoriasURL = /^#categorias\/([a-z]{2})/;
+    var categoriaURL = /^#categoria\/(\d{1,})/;
     adapter.inicializar().done(function () {
         console.log("Inicializado: Adaptador de datos");
-        //$('body').html(new HomeView(adapter).render());
         route();
     });
     
@@ -36,11 +33,33 @@
             $('body').html(new HomeView(adapter).render());
             return;
         }
-        var match = hash.match(futbolistaURL);
+        var match = hash.match(categoriasURL);
+        var idioma = null;
         if (match) {
-            adapter.encontrarPorId(Number(match[1])).done(function(futbolista) {
-                $('body').html(new JugadorView(adapter, futbolista).render());
+            idioma = match[1];
+            adapter.encontrarCategoriaIdioma(idioma).done(function(categorias) {
+                $('body').html(new Categorias(adapter, categorias).render());
             });
-    }
-}
+        }
+        var match = hash.match(categoriaURL); 
+        var categ = null;
+        if (match) {
+            categ = match[1];
+            if (categ==1 || categ==2 || categ==3 || categ==4 || categ==5) {
+                adapter.encontrarPlatosIdioma(idioma, categ).done(function(platos) {
+                    $('body').html(new VerPlatosCategoria(adapter, platos).render());
+                });
+            }
+            if (categ==6 || categ==7 || categ==8) {
+                adapter.encontrarPlatosIdioma(idioma, categ).done(function(platos) {
+                    $('body').html(new VerOtraCategoria(adapter, platos).render());
+                });
+            }
+            if (categ==9) {
+                adapter.encontrarBebidasIdioma(idioma, categ).done(function(platos) {
+                    $('body').html(new VerBebidasTerraza(adapter, platos).render());
+                });
+            } 
+        }  
+    }                                        
 }());

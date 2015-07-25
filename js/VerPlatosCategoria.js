@@ -1,4 +1,4 @@
-var HomeView = function (adapter) {
+var VerPlatosCategoria = function (adapter) {
     this.inicializar = function () {
         // Definimos un div para la vista. Lo usaremos para añadir eventos.
         this.el = $('<div/>');
