@@ -4,6 +4,7 @@
     /* ---------------------------------- Variables locales ---------------------------------- */
    var adapter = new WebSqlAdapter();
     var categoriasURL = /^#categorias\/([a-z]{2})/;
+   // var categoriasURL = /^#categorias\/(\d{1,})/;
     var categoriaURL = /^#categoria\/(\d{1,})\/\D/;
     adapter.inicializar().done(function () {
         console.log("Inicializado: Adaptador de datos");
@@ -36,7 +37,9 @@
         var match = hash.match(categoriasURL);
         var idioma = null;
         if (match) {
+            console.log("dentro de match categoriasURL");
             idioma = match[1];
+            console.log("idioma "+idioma);
             adapter.encontrarCategoriaIdioma(idioma).done(function(categorias) {
                 $('body').html(new Categorias(adapter, categorias).render());
             });

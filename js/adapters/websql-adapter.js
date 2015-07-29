@@ -22,6 +22,20 @@ var WebSqlAdapter = function () {
                 deferred.resolve();
             }
         );
+     /*   this.db.transaction(
+            function (tx) {
+                crearTablaP(tx);
+                insertarDatosP(tx);
+            },
+            function (error) {
+                console.log('Transacción Error: ' + error);
+                deferred.reject('Transacción Error: ' + error);
+            },
+            function () {
+                console.log('Transacción con éxito');
+                deferred.resolve();
+            }
+        );*/
         //Los tres parámetros son la transacción en sí, la función de tratamiento de error, y la de todo OK.
         return deferred.promise();
     }
@@ -123,7 +137,7 @@ var WebSqlAdapter = function () {
             "precio FLOAT";
         tx.executeSql(sql, null,
             function () {
-                console.log('Crear tabla  platos OK');
+                console.log('Crear tabla platos OK');
             },
             function (tx, error) {
                 alert('Crear tabla error: ' + error.message);
@@ -146,12 +160,12 @@ var WebSqlAdapter = function () {
 
         var l = categorias.length;
         var sql = "INSERT OR REPLACE INTO categorias " +
-            "(cid, ccastellano, cingles, cfrances, citaliano, imagen) " +
+            "(cid, ccastellano, cingles, cfrances, citaliano, cimagen) " +
             "VALUES (?, ?, ?, ?, ?, ?)";
         var e;
         for (var i = 0; i < l; i++) {
             e = categorias[i];
-            tx.executeSql(sql, [e.cid, e.ccastellano, e.cingles, e.cfrances, e.citaliano, e.imagen],
+            tx.executeSql(sql, [e.cid, e.ccastellano, e.cingles, e.cfrances, e.citaliano, e.cimagen],
                 function () {
                     console.log('INSERT OK');
                 },
@@ -225,3 +239,4 @@ var WebSqlAdapter = function () {
                 });
         }
     }
+}

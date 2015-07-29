@@ -8,5 +8,5 @@ var Categorias = function(adapter, categorias) {
     };
     
     this.inicializar();
-    
+    this.render();
 }

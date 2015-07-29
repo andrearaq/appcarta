@@ -169,3 +169,19 @@ a {
     clear: both;
 }
 
+.inicio {
+    text-align: center;
+}
+
+.imginicio{
+    width: 800px;
+    height: 280px;
+}
+
+footer {
+    text-align: center;
+}
+
+.topcoat-button-bar__item img {
+    margin-top: 5%;
+}
