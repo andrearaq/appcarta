@@ -178,10 +178,19 @@ a {
     height: 280px;
 }
 
+.imgboton {
+    width: 480px;
+    height: 280px;
+}
+
 footer {
     text-align: center;
 }
 
 .topcoat-button-bar__item img {
     margin-top: 5%;
+}
+
+.conjunto {
+    width: 100%;
 }

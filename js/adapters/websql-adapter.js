@@ -8,10 +8,10 @@ var WebSqlAdapter = function () {
         //Database name, Version number, Text description, Estimated size of database
         this.db.transaction(
             function (tx) {
-                crearTablaC(tx);
-                insertarDatosC(tx);
                 crearTablaP(tx);
                 insertarDatosP(tx);
+                crearTablaC(tx);
+                insertarDatosC(tx);
             },
             function (error) {
                 console.log('Transacción Error: ' + error);
@@ -22,20 +22,6 @@ var WebSqlAdapter = function () {
                 deferred.resolve();
             }
         );
-     /*   this.db.transaction(
-            function (tx) {
-                crearTablaP(tx);
-                insertarDatosP(tx);
-            },
-            function (error) {
-                console.log('Transacción Error: ' + error);
-                deferred.reject('Transacción Error: ' + error);
-            },
-            function () {
-                console.log('Transacción con éxito');
-                deferred.resolve();
-            }
-        );*/
         //Los tres parámetros son la transacción en sí, la función de tratamiento de error, y la de todo OK.
         return deferred.promise();
     }
@@ -44,21 +30,22 @@ var WebSqlAdapter = function () {
         var deferred = $.Deferred();
         this.db.transaction(
             function (tx) {
-                switch(id) {
-                    case "es":
-                        var sql = "SELECT cid, ccastellano as nomcateg, cimagen FROM categorias ORDER BY cid";
+                var sql="";
+                switch (id) {
+                    case "1":
+                        sql = "SELECT cid, ccastellano AS nomcateg, cimagen FROM categorias ORDER BY cid";
                         break;
-                    case "uk":
-                        var sql = "SELECT cid, cingles as nomcateg, cimagen FROM categorias ORDER BY cid";
+                    case "2":
+                        sql = "SELECT cid, cingles AS nomcateg, cimagen FROM categorias ORDER BY cid";
                         break;
-                    case "fr":
-                        var sql = "SELECT cid, cfrances as nomcateg, cimagen FROM categorias ORDER BY cid";
+                    case "3":
+                        sql = "SELECT cid, cfrances AS nomcateg, cimagen FROM categorias ORDER BY cid";
                         break;                    
-                    case "it":
-                        var sql = "SELECT cid, citaliano as nomcateg, cimagen FROM categorias ORDER BY cid";
+                    case "4":
+                        sql = "SELECT cid, citaliano AS nomcateg, cimagen FROM categorias ORDER BY cid";
                         break; 
                 }
-                tx.executeSql(sql, function (tx, results) {
+                tx.executeSql(sql, [], function (tx, results) {
                     var len = results.rows.length,
                         categorias = [],
                         i = 0;
@@ -80,16 +67,16 @@ var WebSqlAdapter = function () {
         this.db.transaction(
             function (tx) {
                 switch(id) {
-                    case "es":
+                    case "1":
                         var sql = "SELECT id, castellano as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
                         break;
-                    case "uk":
+                    case "2":
                         var sql = "SELECT id, ingles as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
                         break;
-                    case "fr":
+                    case "3":
                         var sql = "SELECT id, frances as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
                         break;                    
-                    case "it":
+                    case "4":
                         var sql = "SELECT id, italiano as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
                         break; 
                 }
@@ -104,6 +91,34 @@ var WebSqlAdapter = function () {
         return deferred.promise();
     };
     
+    this.encontrarBebidasIdioma = function (id, cat) {
+        var deferred = $.Deferred();
+        this.db.transaction(
+            function (tx) {
+                switch(id) {
+                    case "1":
+                        var sql = "SELECT id, castellano as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        break;
+                    case "2":
+                        var sql = "SELECT id, ingles as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        break;
+                    case "3":
+                        var sql = "SELECT id, frances as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        break;                    
+                    case "4":
+                        var sql = "SELECT id, italiano as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        break; 
+                }
+                tx.executeSql(sql, [cat], function (tx, results) {
+                    deferred.resolve(results.rows.length === 1 ? results.rows.item(0) : null);
+                });
+            },
+            function (error) {
+                deferred.reject("Transacción Error: " + error.message);
+            }
+        );
+        return deferred.promise();
+    };
     //crear tabla Categorias
     var crearTablaC = function (tx) {
         tx.executeSql('DROP TABLE IF EXISTS categorias');
@@ -133,8 +148,8 @@ var WebSqlAdapter = function () {
             "ingles VARCHAR(50), " +
             "frances VARCHAR(50), " +
             "italiano VARCHAR(50), " +            
-            "imagen VARCHAR(50)), " +
-            "precio FLOAT";
+            "imagen VARCHAR(50), " +
+            "precio FLOAT)";
         tx.executeSql(sql, null,
             function () {
                 console.log('Crear tabla platos OK');
@@ -150,10 +165,10 @@ var WebSqlAdapter = function () {
         {"cid": 1, "ccastellano": "Entrantes frios", "cingles": "Cold starters", "cfrances": "Entrées froides", "citaliano": "Antipasti freddi",  "cimagen":"entrantesfrios.jpg"},
         {"cid": 2, "ccastellano": "Entrantes calientes", "cingles": "Hot starters", "cfrances": "Entrées chaudes", "citaliano": "Antipasti calde",  "cimagen":"entrantescalientes.jpg"},
         {"cid": 3, "ccastellano": "Carnes", "cingles": "Meat", "cfrances": "Viande", "citaliano": "Carne",  "cimagen":"carnes.jpg"},
-        {"cid": 4, "ccastellano": "Pescados", "cingles": "Fish", "cfrances": "Poisson", "citaliano": "Pesce",  "cimagen":"pescado.jpg"},
-        {"cid": 5, "ccastellano": "Postres", "cingles": "Desserts", "cfrances": "Desserts", "citaliano": "Dessert",  "cimagen":"postre.jpg"},
+        {"cid": 4, "ccastellano": "Pescados", "cingles": "Fish", "cfrances": "Poisson", "citaliano": "Pesce",  "cimagen":"pescados.jpg"},
+        {"cid": 5, "ccastellano": "Postres", "cingles": "Desserts", "cfrances": "Desserts", "citaliano": "Dessert",  "cimagen":"postres.jpg"},
         {"cid": 6, "ccastellano": "Raciones", "cingles": "Servings", "cfrances": "Portions", "citaliano": "Porzioni",  "cimagen":"raciones.jpg"},
-        {"cid": 7, "ccastellano": "Menus", "cingles": "Menu", "cfrances": "Menus", "citaliano": "Menus",  "imagen":"menus.jpg"},
+        {"cid": 7, "ccastellano": "Menus", "cingles": "Menu", "cfrances": "Menus", "citaliano": "Menus",  "cimagen":"menus.jpg"},
         {"cid": 8, "ccastellano": "Bebidas", "cingles": "Drinks", "cfrances": "Boissons", "citaliano": "Bevande",  "cimagen":"bebidas.jpg"},
         {"cid": 9, "ccastellano": "Bebidas Terraza", "cingles": "Terrace drinks", "cfrances": "Boissons terrasse", "citaliano": "Bevande terrazza",  "cimagen":"bebidasterraza.jpg"}
     ];
