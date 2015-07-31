@@ -31,6 +31,8 @@ var WebSqlAdapter = function () {
         this.db.transaction(
             function (tx) {
                 var sql="";
+                localStorage['idioma'] = id;
+                console.log("localstorage idioma: "+localStorage['idioma']+" tipo: "+typeof(localStorage['idioma']));
                 switch (id) {
                     case "1":
                         sql = "SELECT cid, ccastellano AS nomcateg, cimagen FROM categorias ORDER BY cid";
@@ -64,24 +66,32 @@ var WebSqlAdapter = function () {
     
     this.encontrarPlatosIdioma = function (id, cat) {
         var deferred = $.Deferred();
+        console.log("dentro de encontrar platos. tipo cat: "+typeof(cat));
         this.db.transaction(
             function (tx) {
                 switch(id) {
                     case "1":
-                        var sql = "SELECT id, castellano as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        var sql = "SELECT a.id, a.castellano as nomplato, a.imagen, a.precio, b.ccastellano AS nomcateg ";
+                        sql += "FROM platos as a, categorias as b WHERE a.categoria=? AND b.ccid = a.id";
                         break;
                     case "2":
-                        var sql = "SELECT id, ingles as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        var sql = "SELECT id, ingles as nomplato, imagen, precio FROM platos WHERE categoria=?";
                         break;
                     case "3":
-                        var sql = "SELECT id, frances as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        var sql = "SELECT id, frances as nomplato, imagen, precio FROM platos WHERE categoria=?";
                         break;                    
                     case "4":
-                        var sql = "SELECT id, italiano as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        var sql = "SELECT id, italiano as nomplato, imagen, precio FROM platos WHERE categoria=?";
                         break; 
                 }
                 tx.executeSql(sql, [cat], function (tx, results) {
-                    deferred.resolve(results.rows.length === 1 ? results.rows.item(0) : null);
+                    var len = results.rows.length,
+                        platos = [],
+                        i = 0;
+                    for (; i < len; i = i + 1) {
+                        platos[i] = results.rows.item(i);
+                    }
+                    deferred.resolve(platos);
                 });
             },
             function (error) {
@@ -97,20 +107,27 @@ var WebSqlAdapter = function () {
             function (tx) {
                 switch(id) {
                     case "1":
-                        var sql = "SELECT id, castellano as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        var sql = "SELECT id, castellano as nomplato, imagen, precio FROM platos WHERE categoria=?";
                         break;
                     case "2":
-                        var sql = "SELECT id, ingles as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        var sql = "SELECT id, ingles as nomplato, imagen, precio FROM platos WHERE categoria=?";
                         break;
                     case "3":
-                        var sql = "SELECT id, frances as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        var sql = "SELECT id, frances as nomplato, imagen, precio FROM platos WHERE categoria=?";
                         break;                    
                     case "4":
-                        var sql = "SELECT id, italiano as nomplato, imagen, precio FROM platos WHERE categoria=:cat";
+                        var sql = "SELECT id, italiano as nomplato, imagen, precio FROM platos WHERE categoria=?";
                         break; 
                 }
                 tx.executeSql(sql, [cat], function (tx, results) {
-                    deferred.resolve(results.rows.length === 1 ? results.rows.item(0) : null);
+                    var len = results.rows.length,
+                        platos = [],
+                        i = 0;
+                    for (; i < len; i = i + 1) {
+                        platos[i] = results.rows.item(i);
+                        
+                    }
+                    deferred.resolve(platos);
                 });
             },
             function (error) {
