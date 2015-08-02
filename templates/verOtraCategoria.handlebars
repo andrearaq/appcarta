@@ -5,7 +5,9 @@
             </a>
         </div>
         <div class="topcoat-navigation-bar__item center half">
+            {{#.}}
             <h1 class="topcoat-navigation-bar__title">{{nomcateg}}</h1>
+            {{/.}}
         </div>
     </div>
 
@@ -14,8 +16,11 @@
         {{#.}}
             <li class="topcoat-list__item">
                 <img src="img/raciones/{{imagen}}">
-                <p>{{nomplato}} <span>- {{precio}} € -</span></p>
+                <p>{{nomplato}} <span> {{precio}} € </p> 
           </li>
         {{/.}}
   </ul>
 </div>
+<footer>
+ <h3>Copyright @Restaurante Antonio 2015</h3>
+</footer>

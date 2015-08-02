@@ -71,17 +71,20 @@ var WebSqlAdapter = function () {
             function (tx) {
                 switch(id) {
                     case "1":
-                        var sql = "SELECT a.id, a.castellano as nomplato, a.imagen, a.precio, b.ccastellano AS nomcateg ";
-                        sql += "FROM platos as a, categorias as b WHERE a.categoria=? AND b.ccid = a.id";
+                        var sql = "SELECT a.id, a.nombre, a.castellano as nomplato, a.imagen, a.precio, b.ccastellano AS nomcateg"+
+                            " FROM platos as a, categorias as b WHERE a.categoria=? AND b.cid = a.categoria";
                         break;
                     case "2":
-                        var sql = "SELECT id, ingles as nomplato, imagen, precio FROM platos WHERE categoria=?";
+                        var sql = "SELECT a.id, a.nombre, a.ingles as nomplato, a.imagen, a.precio, b.cingles AS nomcateg"+
+                            " FROM platos as a, categorias as b WHERE a.categoria=? AND b.cid = a.categoria";
                         break;
                     case "3":
-                        var sql = "SELECT id, frances as nomplato, imagen, precio FROM platos WHERE categoria=?";
+                        var sql = "SELECT a.id, a.nombre, a.frances as nomplato, a.imagen, a.precio, b.cfrances AS nomcateg"+
+                            " FROM platos as a, categorias as b WHERE a.categoria=? AND b.cid = a.categoria";
                         break;                    
                     case "4":
-                        var sql = "SELECT id, italiano as nomplato, imagen, precio FROM platos WHERE categoria=?";
+                        var sql = "SELECT a.id, a.nombre, a.italiano as nomplato, a.imagen, a.precio, b.citaliano AS nomcateg"+
+                            " FROM platos as a, categorias as b WHERE a.categoria=? AND b.cid = a.categoria";
                         break; 
                 }
                 tx.executeSql(sql, [cat], function (tx, results) {
@@ -247,7 +250,7 @@ var WebSqlAdapter = function () {
         {"id": 35, "nombre": "Gambas a la plancha", "categoria": 6, "castellano": "Gambas de Huelva a la plancha (6 unidades) ", "ingles": "Grilled Huelva prawns (6 units)", "frances": "Huelva grillé de crevettes (6 unités)", "italiano":"Grigliate di Huelva gamberetti (6 unitá)", "imagen":"gambasplancha.jpg", "precio":8.00},
         {"id": 36, "nombre": "Anchoas marinadas", "categoria": 6, "castellano": "Anchoas marinadas (6 unidades)", "ingles": "Marinated anchovies (6 units)", "frances": "Anchois marinés (6 unités)", "italiano":"Acciughe marinate (6 unitá)", "imagen":"anchoasmarinadas.jpg", "precio":8.00},
         {"id": 37, "nombre": "Pulpo a la gallega", "categoria": 6, "castellano": "Pulpo a la gallega", "ingles": "Galician octopus", "frances": "Poulpe galicien", "italiano":"Polpo gallego", "imagen":"pulpogallega.jpg", "precio":12.00},
-        {"id": 38, "nombre": "Sorbetes de fruta natural", "categoria": 7, "castellano": "Sorbetes de fruta natural", "ingles": "Natural fruit sorbets", "frances": "Sorbets de fruits naturels", "italiano":"Sorbetti alla frutta naturale", "imagen":"sorbetelimon.jpg", "precio":5.00},
+        {"id": 38, "nombre": "Sorbetes de fruta natural", "categoria": 6, "castellano": "Sorbetes de fruta natural", "ingles": "Natural fruit sorbets", "frances": "Sorbets de fruits naturels", "italiano":"Sorbetti alla frutta naturale", "imagen":"sorbetelimon.jpg", "precio":5.00},
         {"id": 39, "nombre": "Brownie de chocolate", "categoria": 6, "castellano": "Brownie de chocolate con helado de vainilla", "ingles": "Chocolate brownie with vanilla ice", "frances": "Brownie au chocolat avec glace à la vanille", "italiano":"Brownie al cioccolato con gelato alla vaniglia", "imagen":"brownie.jpg", "precio":5.00},
         {"id": 40, "nombre": "Trufas de chocolate", "categoria": 6, "castellano": "Trufas de chocolate (5 unidades)", "ingles": "Chocolate truffles (5 units)", "frances": "Truffes au chocolat (5 unités)", "italiano":"Tartufi di cioccolato (5 unitá)", "imagen":"trufas.jpg", "precio":5.00},
         {"id": 41, "nombre": "Menú Desgustación", "categoria": 7, "castellano": "Menú Degustación", "ingles": "Tasting menu", "frances": "Menu dégustation", "italiano":"Menu degustazione", "imagen":"bale.jpg", "precio":39.00},
