@@ -1,13 +1,15 @@
- <div class="topcoat-navigation-bar">
+   <div class="topcoat-navigation-bar">
         <div class="topcoat-navigation-bar__item left quarter">
             <a class="topcoat-icon-button--quiet back-button" href="#">
                 <span class="topcoat-icon topcoat-icon--back"></span>
             </a>
         </div>
         <div class="topcoat-navigation-bar__item center half">
+            {{#.}}
             <h1 class="topcoat-navigation-bar__title">{{nomcateg}}</h1>
+            {{/.}}
         </div>
-        <div class="topcoat-navigation-bar__item center half">
+       <div class="topcoat-navigation-bar__item center half">
             <img src="img/logo2.png"/></span>
         </div>
     </div>
@@ -15,8 +17,10 @@
 <div class="topcoat-list">
     <ul class="topcoat-list__container list" >
         {{#.}}
-            <li class="topcoat-list__item">
-                <p>{{nomplato}} <span>- {{precio}} € -</span></p>
+         <li class="topcoat-list__item">
+                <img class="imgracion" src="img/raciones/{{imagen}}">
+                <p>{{nomplato}} <span class="precio"> {{precio}} € </span> <span class="chevron"></span> </p> 
+             
           </li>
         {{/.}}
   </ul>

@@ -6,29 +6,35 @@
         </div>
         <div class="topcoat-navigation-bar__item center half">
             {{#.}}
-            <h1 class="topcoat-navigation-bar__title">{{nomcateg}}</h1>
+            <h1 class="topcoat-navigation-bar__title">{{nomcateg}}</h1><span>
             {{/.}}
         </div>
-    </div>
-    <div id="gallery">
-        <div id="panel">
-            <img id="largeImage" src="img/{{imagen}}" />
-            <div id="precio">{{precio}}</div> 
-        </div>
-        <div id="description">{{nomplato}}</div>
-
-        <div id="thumbs">
-            <ul>
-            {{#.}}
-                <li class="topcoat-list__item">
-                    <p>{{nombre}}</p>
-                    <img src="img/{{imagen}}"> 
-                    <p>{{nomplato}} <span> {{precio}} € </p>                   
-                </li>
-            {{/.}}
-            </ul>
+        <div class="topcoat-navigation-bar__item center half">
+            <img src="img/logo2.png"/></span>
         </div>
     </div>
+<div>
+    <div class="listaplatos">
+        {{#.}}
+          <div class="plato2">
+                 <img src="img/{{imagen}}"/>
+          </div>
+        {{/.}}
+    </div>
+    <div class="topcoat-list platoG">
+        <ul class="topcoat-list__container list2">
+        {{#.}}
+          <li>
+            <p>{{nombre}} <span class="precio"> {{precio}} €</span></p>
+             <img class="platogrande" src="img/{{imagen}}"/><br/>
+              <div class="titulo">
+                <p>{{nomplato}}</p>
+              </div>
+          </li>
+        {{/.}}
+        </ul>
+    </div>
+</div>
 <footer>
  <h3>Copyright @Restaurante Antonio 2015</h3>
 </footer>

@@ -1,12 +1,3 @@
-/*Situamos la caja de búsqueda dentro de un div y le damos el 100% de anchura*/
-.search-bar {
-    padding:10px 10px 12px 8px;
-}
-
-.search-bar > input {
-    width: 100%;
-}
-
 a {
     text-decoration: none;
     color: inherit;	
@@ -22,20 +13,25 @@ a {
 .list > li {
     position: relative;
     clear: both;
-    padding: 0px;
-    margin: 0px;
+    padding: 5px;
+    margin: 5px;
+    border-top: 1px solid #616363;
+    vertical-align: bottom;
 }
-
+.list > li  p {
+    color: #D8D8D8;
+    font-size: 24px;
+}
 .list > li:nth-of-type(1) {
     border-top: none;
 }
 
-.list > li > a {
+/*.list > li > a {
     margin: 0px;
     display: block;
     height: 57px;
     padding: 4px;
-}
+}*/
 
 
 .list > li > a > p:nth-of-type(1) {
@@ -51,8 +47,8 @@ a {
 
 /*Las imágenes en la lista, con un ancho fijo, y el texto a su derecha:*/
 .list > li img {
-    width: 57px;
-    height: 57px;
+    width: 160px;
+    height: 140px;
     float: left;
     margin-right: 8px;
 }
@@ -60,6 +56,29 @@ a {
 /*Cuando pulsamos en un elemento de la lista, le cambiamos el color*/
 .list li:active {
     background-color: #d6d6d6;
+}
+.list2 > li img {
+    width: 600px;
+    height: 450px;
+    float: left;
+    margin-left: 80px;
+}
+.list2 {
+    list-style-type: none;
+    border-top: none !important;
+}
+
+.list2 > li {
+    position: relative;
+    clear: both;
+    padding: 5px;
+    margin: 5px;
+    border-top: 1px solid #616363;
+    vertical-align: bottom;
+}
+.list2 > li  p {
+    color: #fff;
+    font-size: 24px;
 }
 
 /*Añadimos para que el header no haga scroll:*/
@@ -78,12 +97,11 @@ a {
     background: transparent url(../img/next_blue.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
     position: absolute;
     right: 12px;
-    top: 22px;
-
+    top: 18px;
 }
 .scroller {
     overflow: auto;
@@ -144,27 +162,6 @@ a {
 .actions li p:nth-of-type(2) {
     color: inherit;
 }
-.icon-call {
-    background: transparent url(../img/call.svg);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
-.icon-sms {
-    background: transparent url(../img/chat.svg);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
-.icon-mail {
-    background: transparent url(../img/email.svg);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
 .clearfix{
     clear: both;
 }
@@ -174,23 +171,139 @@ a {
 }
 
 .imginicio{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px solid #D8D8D8;
     width: 800px;
-    height: 280px;
+    height: 290px;
 }
 
 .imgboton {
-    width: 480px;
-    height: 280px;
+    width: 220px;
+    height: 110px;
+    border: 2px solid #D8D8D8;
 }
-
-footer {
+.imgboton2 {
+    width: 390px;
+    height: 280px;
+    border: 3px solid #D8D8D8;
+}
+.imgracion {
+    border: 2px solid #D8D8D8;
+}
+.plato {
+    float: left;    
+}
+.plato2 {
+    margin: 0 auto;
+    padding: 4px;
+    float: left;
+}
+.platoG {
+    float: left;
+    width: 100%;
     text-align: center;
 }
-
-.topcoat-button-bar__item img {
-    margin-top: 5%;
+.platogrande {
+    width: 800px;
+    height: 600px;
+    border: 2px solid #D8D8D8;
 }
-
+.listaplatos{
+    width: 100%;
+    margin: 0 auto;
+}
+.plato2 img {
+    width: 110px;
+    height: 100px;
+    border: 2px solid #D8D8D8;
+}
+.botonplato { 
+    white-space: pre-wrap;
+}
 .conjunto {
     width: 100%;
+    margin-left: 7%;
+}
+.precio {
+    color: white;
+    font-size: 32px;
+    float: right;
+}
+.titulo {
+    float: left;
+    text-align: center;
+}
+footer {
+    text-align: center;
+    color: #D8D8D8;
+    clear: both;
+    margin-top: 1%;
+    border-top: 1px solid #595b5b;
+}
+
+.topcoat-button-bar__button:hover, .topcoat-button-bar__item:hover {
+    border-color: #58ACFA;
+}
+.topcoat-button-bar__item img {
+    margin-top: 8%;
+}
+.topcoat-button--large--cta {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 3.375rem;
+  padding: 0 0.8rem 0.8rem 0.8rem;
+  display: block;
+  background: #595b5b;
+  color: #F2F2F2;
+  box-shadow: 1px solid #333434;
+  border: 1px solid #333434;
+  float: left;
+  line-height: 1rem;
+  margin: 3px 15px 3px 3px;
+  
+}
+.topcoat-button--large--cta:hover {
+  background-color:  #2E2E2E;
+  border-color: #58ACFA;
+}
+.topcoat-navigation-bar {
+  height: 3.972rem;
+}
+.topcoat-navigation-bar__title {
+  font-size: 1.6rem;
+}
+.topcoat-list {
+/* border-top: 1px solid #333434;
+  border-bottom: 1px solid #616363;*/
+  background-color: #454646;
+    border: 0;
+}
+.topcoat-list__container {
+/*
+  border-top: 1px solid #333434;
+  color: #c6c8c8;*/
+ border: 0;
+}
+.topcoat-list__item {
+  border: 0;
+}
+.topcoat-list__item:first-child {
+border: 0;
+ /* border-top: 1px solid rgba(0,0,0,0.05);*/
+}
+.list2 {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }

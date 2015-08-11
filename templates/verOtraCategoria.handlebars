@@ -9,14 +9,17 @@
             <h1 class="topcoat-navigation-bar__title">{{nomcateg}}</h1>
             {{/.}}
         </div>
+       <div class="topcoat-navigation-bar__item center half">
+            <img src="img/logo2.png"/></span>
+        </div>
     </div>
 
 <div class="topcoat-list">
     <ul class="topcoat-list__container list" >
         {{#.}}
-            <li class="topcoat-list__item">
-                <img src="img/raciones/{{imagen}}">
-                <p>{{nomplato}} <span> {{precio}} € </p> 
+         <li class="topcoat-list__item">
+                <img class="imgracion" src="img/raciones/{{imagen}}">
+                <p>{{nomplato}} <span class="precio"> {{precio}} € </span> </p> 
           </li>
         {{/.}}
   </ul>

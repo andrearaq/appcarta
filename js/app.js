@@ -62,6 +62,11 @@
                     $('body').html(new VerOtraCategoria(adapter, platos).render());
                 });
             }
+            if (categ=="7") {
+                adapter.verMenus(idioma, parseInt(categ)).done(function(platos) {
+                    $('body').html(new VerMenus(adapter, platos).render());
+                });
+            }
             if (categ=="9") {
                 adapter.encontrarBebidasIdioma(idioma, parseInt(categ)).done(function(platos) {
                     $('body').html(new VerBebidasTerraza(adapter, platos).render());

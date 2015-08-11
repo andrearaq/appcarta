@@ -9,17 +9,14 @@
         </div>
 </div>
 
-<div class="topcoat-button-bar full conjunto">
+<div class="conjunto">
     {{#.}}
-       <div class="topcoat-button-bar__item">
-         <a href='#categoria/{{cid}}/{{nomcateg}}'>
-             <button class="topcoat-button-bar__button full" id="bcateg">
-                 <p>{{nomcateg}}</p>
-                 <img class="imgboton" src="img/categorias/{{cimagen}}">   
-                 <span class="chevron"></span>
-             </button>
-         </a>
-       </div>
+     <a href='#categoria/{{cid}}/{{nomcateg}}'>
+         <button class="topcoat-button--large--cta" id="bcateg">
+            <p>{{nomcateg}} <span class="chevron"></span></p>
+             <img class="imgboton" src="img/categorias/{{cimagen}}">   
+         </button>
+     </a>
     {{/.}}
 </div>
 <footer>
