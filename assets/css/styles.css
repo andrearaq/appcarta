@@ -26,14 +26,6 @@ a {
     border-top: none;
 }
 
-/*.list > li > a {
-    margin: 0px;
-    display: block;
-    height: 57px;
-    padding: 4px;
-}*/
-
-
 .list > li > a > p:nth-of-type(1) {
     margin: 8px 0px 0px 0px;
     font-weight: bold;
@@ -305,8 +297,11 @@ a {
 .logo {
     margin-left: 20px;
 }
-.idiomas {
+.idiomas1 {
     margin-left: 80px;
+}
+.idiomas {
+    margin-left: 140px;
 }   
 .idiomas img {
     margin-top: 25px;

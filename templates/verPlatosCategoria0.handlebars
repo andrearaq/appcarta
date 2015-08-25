@@ -29,18 +29,18 @@
         {{/.}}
     </div>
     <div class="topcoat-list platoG">
-        
+        <ul class="topcoat-list__container list2">
         {{#.}}
-         
+          <li>
             <p><span class="nomplato">{{nombre}}</span> <span class="precio"> {{precio}} €</span></p>
              <div class="titulo"><img class="platogrande" src="img/{{imagen}}"/></div>
               {{#if alergenos}}
                 <div class="alerg"><img src="img/{{alergenos}}"/></div>
               {{/if}}
               <div class="titulo"><p>{{nomplato}}</p></div>
-          
+          </li>
         {{/.}}
-        
+        </ul>
     </div>
 </div>
 <footer>

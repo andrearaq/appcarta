@@ -15,7 +15,7 @@ templates['categorias'] = template({"1":function(depth0,helpers,partials,data) {
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<div class=\"topcoat-navigation-bar fijo\">\r\n     <div class=\"topcoat-navigation-bar__item left quarter\">\r\n        <a class=\"topcoat-icon-button--quiet back-button\" href=\"#\">\r\n             <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n        </a>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center\">\r\n        <h1 class=\"topcoat-navigation-bar__title\">Carta Restaurante Antonio</h1>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\"/>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center\">\r\n        <img src=\"img/logo2.png\"/>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"conjunto\">\r\n"
+  return "<div class=\"topcoat-navigation-bar fijo\">\r\n     <div class=\"topcoat-navigation-bar__item left quarter\">\r\n        <a class=\"topcoat-icon-button--quiet back-button\" href=\"#\">\r\n             <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n        </a>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center\">\r\n        <h1 class=\"topcoat-navigation-bar__title\">Carta Restaurante Antonio</h1>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center quarter idiomas1\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\"/>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center\">\r\n        <img src=\"img/logo2.png\"/>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"conjunto\">\r\n"
     + ((stack1 = helpers.blockHelperMissing.call(depth0,this.lambda(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</div>\r\n<footer>\r\n <h3>Copyright @Restaurante Antonio 2015</h3>\r\n</footer>\r\n";
 },"useData":true});
@@ -43,7 +43,7 @@ templates['verBebidas'] = template({"1":function(depth0,helpers,partials,data) {
 
   return "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Bebidas\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Drinks\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Boissons\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Bevande\"/>\r\n    </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n\r\n<div class=\"topcoat-list\">\r\n    <ul class=\"topcoat-list__container list3\" >\r\n"
+    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Bebidas\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Drinks\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Boissons\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Bevande\"/>\r\n    </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n\r\n<div class=\"topcoat-list\">\r\n    <ul class=\"topcoat-list__container list3\" >\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "  </ul>\r\n</div>\r\n<footer>\r\n <h3>Copyright @Restaurante Antonio 2015</h3>\r\n</footer>";
 },"useData":true});
@@ -66,7 +66,7 @@ templates['verBebidasTerraza'] = template({"1":function(depth0,helpers,partials,
 
   return " <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Bebidas Terraza\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Terrace drinks\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Boissons terrasse\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Bevande terraza\"/>\r\n    </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n</div>\r\n\r\n<div class=\"topcoat-list\">\r\n    <ul class=\"topcoat-list__container list\" >\r\n"
+    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Bebidas Terraza\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Terrace drinks\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Boissons terrasse\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Bevande terraza\"/>\r\n    </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n</div>\r\n\r\n<div class=\"topcoat-list\">\r\n    <ul class=\"topcoat-list__container list\" >\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "  </ul>\r\n</div>\r\n<footer>\r\n <h3>Copyright @Restaurante Antonio 2015</h3>\r\n</footer>";
 },"useData":true});
@@ -104,7 +104,7 @@ templates['verMenus'] = template({"1":function(depth0,helpers,partials,data) {
 
   return "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Menus\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Menu\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Menus\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Menus\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n    </div>\r\n\r\n<div class=\"topcoat-list\">\r\n    <ul class=\"topcoat-list__container list\" >\r\n"
+    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Menus\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Menu\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Menus\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Menus\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n    </div>\r\n\r\n<div class=\"topcoat-list\">\r\n    <ul class=\"topcoat-list__container list\" >\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "  </ul>\r\n</div>\r\n<footer>\r\n <h3>Copyright @Restaurante Antonio 2015</h3>\r\n</footer>";
 },"useData":true});
@@ -129,11 +129,56 @@ templates['verOtraCategoria'] = template({"1":function(depth0,helpers,partials,d
 
   return "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Raciones\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Servings\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Portions\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Porzioni\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n\r\n<div class=\"topcoat-list\">\r\n    <ul class=\"topcoat-list__container list\" >\r\n"
+    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Raciones\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Servings\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Portions\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Porzioni\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n\r\n<div class=\"topcoat-list\">\r\n    <ul class=\"topcoat-list__container list\" >\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "  </ul>\r\n</div>\r\n<footer>\r\n <h3>Copyright @Restaurante Antonio 2015</h3>\r\n</footer>";
 },"useData":true});
 templates['verPlatosCategoria'] = template({"1":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "            <h1 class=\"topcoat-navigation-bar__title\" id=\"categ\">"
+    + alias3(((helper = (helper = helpers.nomcateg || (depth0 != null ? depth0.nomcateg : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomcateg","hash":{},"data":data}) : helper)))
+    + "</h1><span id=\"numcateg\">"
+    + alias3(((helper = (helper = helpers.cid || (depth0 != null ? depth0.cid : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"cid","hash":{},"data":data}) : helper)))
+    + "</span>\r\n";
+},"3":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "          <div class=\"plato2\">\r\n                 <img src=\"img/"
+    + this.escapeExpression(((helper = (helper = helpers.imagen || (depth0 != null ? depth0.imagen : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"imagen","hash":{},"data":data}) : helper)))
+    + "\"/>\r\n          </div>\r\n";
+},"5":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "         \r\n            <p><span class=\"nomplato\">"
+    + alias3(((helper = (helper = helpers.nombre || (depth0 != null ? depth0.nombre : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nombre","hash":{},"data":data}) : helper)))
+    + "</span> <span class=\"precio\"> "
+    + alias3(((helper = (helper = helpers.precio || (depth0 != null ? depth0.precio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"precio","hash":{},"data":data}) : helper)))
+    + " €</span></p>\r\n             <div class=\"titulo\"><img class=\"platogrande\" src=\"img/"
+    + alias3(((helper = (helper = helpers.imagen || (depth0 != null ? depth0.imagen : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"imagen","hash":{},"data":data}) : helper)))
+    + "\"/></div>\r\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.alergenos : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "              <div class=\"titulo\"><p>"
+    + alias3(((helper = (helper = helpers.nomplato || (depth0 != null ? depth0.nomplato : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomplato","hash":{},"data":data}) : helper)))
+    + "</p></div>\r\n          \r\n";
+},"6":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "                <div class=\"alerg\"><img src=\"img/"
+    + this.escapeExpression(((helper = (helper = helpers.alergenos || (depth0 != null ? depth0.alergenos : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"alergenos","hash":{},"data":data}) : helper)))
+    + "\"/></div>\r\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, alias1=this.lambda, alias2=helpers.blockHelperMissing;
+
+  return "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
+    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center \">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n    </div>\r\n<div>\r\n    <div class=\"listaplatos\">\r\n"
+    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "    </div>\r\n    <div class=\"topcoat-list platoG\">\r\n        \r\n"
+    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "        \r\n    </div>\r\n</div>\r\n<footer>\r\n <h3>Copyright @Restaurante Antonio 2015</h3>\r\n</footer>";
+},"useData":true});
+templates['verPlatosCategoria0'] = template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "            <h1 class=\"topcoat-navigation-bar__title\" id=\"categ\">"
@@ -172,7 +217,7 @@ templates['verPlatosCategoria'] = template({"1":function(depth0,helpers,partials
 
   return "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n    </div>\r\n<div>\r\n    <div class=\"listaplatos\">\r\n"
+    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center \">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n    </div>\r\n<div>\r\n    <div class=\"listaplatos\">\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "    </div>\r\n    <div class=\"topcoat-list platoG\">\r\n        <ul class=\"topcoat-list__container list2\">\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
