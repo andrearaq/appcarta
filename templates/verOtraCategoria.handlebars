@@ -1,16 +1,22 @@
-   <div class="topcoat-navigation-bar">
+   <div class="topcoat-navigation-bar fijo">
         <div class="topcoat-navigation-bar__item left quarter">
-            <a class="topcoat-icon-button--quiet back-button" href="#">
+            <a class="topcoat-icon-button--quiet back-button" href="javascript:window.history.back();">
                 <span class="topcoat-icon topcoat-icon--back"></span>
             </a>
         </div>
-        <div class="topcoat-navigation-bar__item center half">
+        <div class="topcoat-navigation-bar__item center quarter">
             {{#.}}
             <h1 class="topcoat-navigation-bar__title">{{nomcateg}}</h1>
             {{/.}}
         </div>
-       <div class="topcoat-navigation-bar__item center half">
-            <img src="img/logo2.png"/></span>
+       <div class="topcoat-navigation-bar__item center quarter idiomas">
+            <img class="flag" id="1" src="img/es.png" alt="Raciones"/>
+            <img class="flag" id="2" src="img/ukp.png" alt="Servings"/>
+            <img class="flag" id="3" src="img/fr.png" alt="Portions"/>
+            <img class="flag" id="4" src="img/it.png" alt="Porzioni"/>
+        </div>
+       <div class="topcoat-navigation-bar__item center quarter">
+            <img src="img/logo2.png"/>
         </div>
     </div>
 
@@ -19,7 +25,7 @@
         {{#.}}
          <li class="topcoat-list__item">
                 <img class="imgracion" src="img/raciones/{{imagen}}">
-                <p>{{nomplato}} <span class="precio"> {{precio}} € </span> </p> 
+                <p><span class="nomplato">{{nomplato}}</span> <span class="precio"> {{precio}} € </span> </p> 
           </li>
         {{/.}}
   </ul>

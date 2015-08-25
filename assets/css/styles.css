@@ -39,7 +39,7 @@ a {
     font-weight: bold;
 }
 
-/*El nombre del juegador en negro, el equipo en gris:*/
+/*El nombre del jugador en negro, el equipo en gris:*/
 .list > li p:nth-of-type(2) {
     margin: 0px;
     color: #777;
@@ -80,17 +80,39 @@ a {
     color: #fff;
     font-size: 24px;
 }
+.list3 > li img {
+    width: 80px;
+    height: 118px;
+    float: left;
+    margin-right: 20px;
+}
+.list3 {
+    list-style-type: none;
+    border-top: none !important;
+}
 
+.list3 > li {
+    position: relative;
+    clear: both;
+    padding: 5px;
+    margin: 5px;
+    border-top: 1px solid #616363;
+    vertical-align: bottom;
+}
+.list3 > li  p {
+    color: #fff;
+    font-size: 24px;
+}
 /*Añadimos para que el header no haga scroll:*/
 .scroller {
     overflow: auto;
 /*iOS 4 or lower required an esoteric two finger gesture to scroll elements but normality was achieved from iOS 5. Unlike other browsers, while overflow:auto works, momentum scrolling is disabled unless you also add -webkit-overflow-scrolling: touch.*/
     -webkit-overflow-scrolling: touch;
-    position: absolute;
+ /*   position: absolute;
     top: 141px;
     bottom: 0px;
     left: 0px;
-    right: 0px;
+    right: 0px;*/
 }
 
 .chevron {
@@ -103,14 +125,15 @@ a {
     right: 12px;
     top: 18px;
 }
-.scroller {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+.chevron2 {
+    background: transparent url(../img/next_blue.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 31px;
+    height: 31px;
     position: absolute;
-    top: 141px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    right:12px;
+    top: 98px;
 }
 /*Todo lo siguiente lo añadimos para modificar la presentación de la vista de jugador:*/
 
@@ -165,7 +188,13 @@ a {
 .clearfix{
     clear: both;
 }
-
+.fijo {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
 .inicio {
     text-align: center;
 }
@@ -191,11 +220,22 @@ a {
 .imgracion {
     border: 2px solid #D8D8D8;
 }
+.imgbebida {
+    border: 2px solid #D8D8D8;
+}
+.imgmenu {
+    border: 3px solid #58ACFA;
+    margin: 0 auto;
+    padding: 10px;
+}
+.vermenu {
+    margin-left: 40px;
+    padding: 20px;
+}
 .plato {
     float: left;    
 }
 .plato2 {
-    margin: 0 auto;
     padding: 4px;
     float: left;
 }
@@ -205,13 +245,13 @@ a {
     text-align: center;
 }
 .platogrande {
-    width: 800px;
-    height: 600px;
     border: 2px solid #D8D8D8;
+    padding: inherit;
 }
 .listaplatos{
     width: 100%;
     margin: 0 auto;
+    text-align: center;
 }
 .plato2 img {
     width: 110px;
@@ -226,15 +266,58 @@ a {
     margin-left: 7%;
 }
 .precio {
-    color: white;
+    color: #FFF;
     font-size: 32px;
     float: right;
+    margin-right: 10px;
+}
+.precio2 {
+    color: #FFF;
+    font-size: 36px;
+    margin-left: 120px;
 }
 .titulo {
-    float: left;
+    clear: both;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
     text-align: center;
+    padding: inherit;
+}
+.titulo img {
+    max-width: 90%;
+}
+.nomplato {
+    color: #58ACFA;
+}
+.alerg{
+    float: left;
+    width: 50px;
+    border: 0;
+    margin-left: -60px;
+    padding: 0;
+    background: transparent;
+}
+.alerg img {
+    max-width: 100%;
+    background: transparent;
+}
+.logo {
+    margin-left: 20px;
+}
+.idiomas {
+    margin-left: 80px;
+}   
+.idiomas img {
+    margin-top: 25px;
+    margin-left: 1px;
+}
+.flag:hover {
+    border: 1px solid #58ACFA;
+    padding: 1px;
 }
 footer {
+    position: static;
     text-align: center;
     color: #D8D8D8;
     clear: both;
@@ -242,7 +325,7 @@ footer {
     border-top: 1px solid #595b5b;
 }
 
-.topcoat-button-bar__button:hover, .topcoat-button-bar__item:hover {
+.topcoat-button-bar__button:hover, .topcoat-button-bar__item:hover, .plato2 img:hover, .imgracion:hover {
     border-color: #58ACFA;
 }
 .topcoat-button-bar__item img {
@@ -261,36 +344,30 @@ footer {
   float: left;
   line-height: 1rem;
   margin: 3px 15px 3px 3px;
-  
 }
 .topcoat-button--large--cta:hover {
   background-color:  #2E2E2E;
   border-color: #58ACFA;
 }
 .topcoat-navigation-bar {
+  position: static;
   height: 3.972rem;
 }
 .topcoat-navigation-bar__title {
   font-size: 1.6rem;
 }
 .topcoat-list {
-/* border-top: 1px solid #333434;
-  border-bottom: 1px solid #616363;*/
   background-color: #454646;
-    border: 0;
+  border: 0;
 }
 .topcoat-list__container {
-/*
-  border-top: 1px solid #333434;
-  color: #c6c8c8;*/
  border: 0;
 }
 .topcoat-list__item {
   border: 0;
 }
 .topcoat-list__item:first-child {
-border: 0;
- /* border-top: 1px solid rgba(0,0,0,0.05);*/
+  border: 0;
 }
 .list2 {
   padding: 0;
@@ -306,4 +383,7 @@ border: 0;
   user-select: none;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+}
+#numcateg {
+    display: none;
 }

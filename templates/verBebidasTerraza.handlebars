@@ -1,22 +1,30 @@
- <div class="topcoat-navigation-bar">
+ <div class="topcoat-navigation-bar fijo">
         <div class="topcoat-navigation-bar__item left quarter">
-            <a class="topcoat-icon-button--quiet back-button" href="#">
+            <a class="topcoat-icon-button--quiet back-button" href="javascript:window.history.back();">
                 <span class="topcoat-icon topcoat-icon--back"></span>
             </a>
         </div>
-        <div class="topcoat-navigation-bar__item center half">
+        <div class="topcoat-navigation-bar__item center quarter">
+            {{#.}}
             <h1 class="topcoat-navigation-bar__title">{{nomcateg}}</h1>
+            {{/.}}
         </div>
-        <div class="topcoat-navigation-bar__item center half">
-            <img src="img/logo2.png"/></span>
-        </div>
+       <div class="topcoat-navigation-bar__item center quarter idiomas">
+        <img class="flag" id="1" src="img/es.png" alt="Bebidas Terraza"/>
+        <img class="flag" id="2" src="img/ukp.png" alt="Terrace drinks"/>
+        <img class="flag" id="3" src="img/fr.png" alt="Boissons terrasse"/>
+        <img class="flag" id="4" src="img/it.png" alt="Bevande terraza"/>
     </div>
+       <div class="topcoat-navigation-bar__item center quarter">
+            <img src="img/logo2.png"/>
+        </div>
+</div>
 
 <div class="topcoat-list">
     <ul class="topcoat-list__container list" >
         {{#.}}
             <li class="topcoat-list__item">
-                <p>{{nomplato}} <span>- {{precio}} € -</span></p>
+                <p><span class="nomplato">{{nomplato}}</span> <span class="precio">{{precio}} €</span></p>
           </li>
         {{/.}}
   </ul>

@@ -1,0 +1,35 @@
+   <div class="topcoat-navigation-bar fijo">
+        <div class="topcoat-navigation-bar__item left quarter">
+            <a class="topcoat-icon-button--quiet back-button" href="javascript:window.history.back();">
+                <span class="topcoat-icon topcoat-icon--back"></span>
+            </a>
+        </div>
+        <div class="topcoat-navigation-bar__item center quarter">
+            {{#.}}
+            <h1 class="topcoat-navigation-bar__title">{{nomcateg}}</h1>
+            {{/.}}
+        </div>
+       <div class="topcoat-navigation-bar__item center quarter idiomas">
+        <img class="flag" id="1" src="img/es.png" alt="Bebidas"/>
+        <img class="flag" id="2" src="img/ukp.png" alt="Drinks"/>
+        <img class="flag" id="3" src="img/fr.png" alt="Boissons"/>
+        <img class="flag" id="4" src="img/it.png" alt="Bevande"/>
+    </div>
+       <div class="topcoat-navigation-bar__item center quarter">
+            <img src="img/logo2.png"/>
+        </div>
+    </div>
+
+<div class="topcoat-list">
+    <ul class="topcoat-list__container list3" >
+        {{#.}}
+         <li class="topcoat-list__item">
+                <img class="imgbebida" src="img/bebidas/{{imagen}}">
+                <p><span class="nomplato">{{nomplato}}</span> <span class="precio"> {{precio}} € </span> </p> 
+          </li>
+        {{/.}}
+  </ul>
+</div>
+<footer>
+ <h3>Copyright @Restaurante Antonio 2015</h3>
+</footer>

@@ -1,17 +1,24 @@
-   <div class="topcoat-navigation-bar">
+   <div class="topcoat-navigation-bar fijo">
         <div class="topcoat-navigation-bar__item left quarter">
-            <a class="topcoat-icon-button--quiet back-button" href="#">
+            <a class="topcoat-icon-button--quiet back-button" href="javascript:window.history.back();">
                 <span class="topcoat-icon topcoat-icon--back"></span>
             </a>
         </div>
-        <div class="topcoat-navigation-bar__item center half">
+        <div class="topcoat-navigation-bar__item center quarter">
             {{#.}}
-            <h1 class="topcoat-navigation-bar__title">{{nomcateg}}</h1><span>
+            <h1 class="topcoat-navigation-bar__title" id="categ">{{nomcateg}}</h1><span id="numcateg">{{cid}}</span>
             {{/.}}
         </div>
-        <div class="topcoat-navigation-bar__item center half">
-            <img src="img/logo2.png"/></span>
+       <div class="topcoat-navigation-bar__item center quarter idiomas">
+            <img class="flag" id="1" src="img/es.png" alt=""/>
+            <img class="flag" id="2" src="img/ukp.png" alt=""/>
+            <img class="flag" id="3" src="img/fr.png" alt=""/>
+            <img class="flag" id="4" src="img/it.png" alt=""/>
         </div>
+       <div class="topcoat-navigation-bar__item center quarter">
+            <img src="img/logo2.png"/>
+        </div>
+    </div>
     </div>
 <div>
     <div class="listaplatos">
@@ -25,11 +32,12 @@
         <ul class="topcoat-list__container list2">
         {{#.}}
           <li>
-            <p>{{nombre}} <span class="precio"> {{precio}} €</span></p>
-             <img class="platogrande" src="img/{{imagen}}"/><br/>
-              <div class="titulo">
-                <p>{{nomplato}}</p>
-              </div>
+            <p><span class="nomplato">{{nombre}}</span> <span class="precio"> {{precio}} €</span></p>
+             <div class="titulo"><img class="platogrande" src="img/{{imagen}}"/></div>
+              {{#if alergenos}}
+                <div class="alerg"><img src="img/{{alergenos}}"/></div>
+              {{/if}}
+              <div class="titulo"><p>{{nomplato}}</p></div>
           </li>
         {{/.}}
         </ul>
