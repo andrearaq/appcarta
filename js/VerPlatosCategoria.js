@@ -3,6 +3,9 @@ var VerPlatosCategoria = function (adapter, platos) {
         // Definimos un div para la vista. Lo usaremos para añadir eventos.
         this.el = $('<div/>');
         this.el.on('click', '.flag', this.encontrarPlatos);
+        this.el.ready(function(){
+            console.log("cargada vista platos")
+        });
     };
     this.render = function() {
         this.el.html(Handlebars.templates.verPlatosCategoria(platos));

@@ -229,25 +229,37 @@ a {
 }
 .plato2 {
     padding: 4px;
-    float: left;
+    clear: both;
+    text-align: left;
 }
 .platoG {
     float: left;
-    width: 100%;
+    width: 70%;
     text-align: center;
+    border: 1px solid #fff;
 }
 .platogrande {
     border: 2px solid #D8D8D8;
     padding: inherit;
 }
-.listaplatos{
+.verplatos {
     width: 100%;
     margin: 0 auto;
+    text-align: left;
+}
+.listaplatos{
+    margin: 0px;
+    padding: 0px;
+    width: 20%;
     text-align: center;
+    float: right;
+  /*  border: 1px solid #fff;*/
 }
 .plato2 img {
     width: 110px;
     height: 100px;
+    padding: 1px;
+    margin: 0px;
     border: 2px solid #D8D8D8;
 }
 .botonplato { 
@@ -268,6 +280,13 @@ a {
     font-size: 36px;
     margin-left: 120px;
 }
+.precio3 {
+    color: #FFF;
+    font-size: 22px;
+    float: right;
+  /*  margin-right: 10px;*/
+    margin-left: 0px;
+}
 .titulo {
     clear: both;
     margin: 0 auto;
@@ -281,6 +300,10 @@ a {
 }
 .nomplato {
     color: #58ACFA;
+}
+.nomplato2 {
+    color: #58ACFA;
+    padding: 0px;
 }
 .alerg{
     float: left;

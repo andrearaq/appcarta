@@ -1,4 +1,4 @@
-   <div class="topcoat-navigation-bar fijo">
+<div class="topcoat-navigation-bar fijo">
         <div class="topcoat-navigation-bar__item left quarter">
             <a class="topcoat-icon-button--quiet back-button" href="javascript:window.history.back();">
                 <span class="topcoat-icon topcoat-icon--back"></span>
@@ -18,30 +18,22 @@
        <div class="topcoat-navigation-bar__item center ">
             <img src="img/logo2.png"/>
         </div>
+</div>
+<div class="verplatos">
+    <div class="platoG">       
+            <img class="platogrande" src="img/{{imagen}}"/>
+            <span class="precio"> €</span>
+            <p id="plato"></p>
     </div>
-    </div>
-<div>
     <div class="listaplatos">
         {{#.}}
           <div class="plato2">
-                 <img src="img/{{imagen}}"/>
+                 <img src="img/{{imagen}}" alt="{{nomplato}}"/><span class="precio3"> {{precio}} €</span><br/>
+             <span class="nomplato2">{{nombre}}</span>
           </div>
         {{/.}}
     </div>
-    <div class="topcoat-list platoG">
-        
-        {{#.}}
-         
-            <p><span class="nomplato">{{nombre}}</span> <span class="precio"> {{precio}} €</span></p>
-             <div class="titulo"><img class="platogrande" src="img/{{imagen}}"/></div>
-              {{#if alergenos}}
-                <div class="alerg"><img src="img/{{alergenos}}"/></div>
-              {{/if}}
-              <div class="titulo"><p>{{nomplato}}</p></div>
-          
-        {{/.}}
-        
-    </div>
+    
 </div>
 <footer>
  <h3>Copyright @Restaurante Antonio 2015</h3>
