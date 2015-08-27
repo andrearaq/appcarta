@@ -237,6 +237,12 @@ a {
     width: 75%;
     text-align: center;
     border: 1px solid #fff;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.platoG p {
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 .platogrande {
     border: 2px solid #D8D8D8;
@@ -269,6 +275,18 @@ a {
 #textoplato {
     color: #FFF;
     font-size: 20px;
+}
+#alerg {
+    display: none;
+}
+#ale {
+    text-align: left;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+#alergenos {
+    text-align: left;
+    margin-top: 1px;
 }
 .botonplato { 
     white-space: pre-wrap;

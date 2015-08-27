@@ -20,18 +20,25 @@
         </div>
 </div>
 <div class="verplatos">
-    <div class="platoG">       
-            <img class="platogrande" id="fotoplato"/>
+    <div class="platoG"> 
+        {{#.}}
+            <img class="platogrande" id="fotoplato" src="img/{{imagen}}"/>
             <span class="precio" id="precioplato"></span>
             <p id="textoplato"></p>
+            <span id="ale"><img id="alergenos" /></span>
+        {{/.}}
+        
     </div>
     <div class="listaplatos">
         {{#.}}
           <div class="plato2">
-                 <img class="platoP" src="img/{{imagen}}" alt="{{nomplato}}" />
-                 <span class="precio3"> {{precio}} €</span>
-                 <br/>
-                <span class="nomplato2">{{nombre}}</span>
+             <img class="platoP" src="img/{{imagen}}" alt="{{nomplato}}" />
+             <span class="precio3"> {{precio}} €</span>
+             {{#if alergenos}}
+                <img id="alerg" src="img/{{alergenos}}"/>
+             {{/if}}
+             <br/>
+            <span class="nomplato2">{{nombre}}</span>
           </div>
         {{/.}}
     </div>
