@@ -3,9 +3,13 @@ var VerPlatosCategoria = function (adapter, platos) {
         // Definimos un div para la vista. Lo usaremos para añadir eventos.
         this.el = $('<div/>');
         this.el.on('click', '.flag', this.encontrarPlatos);
-        this.el.ready(function(){
-            console.log("cargada vista platos")
-        });
+        this.el.on('click', '.platoP', this.mostrarPlato);
+//        this.el.ready(function(){
+  //          console.log("cargada vista platos");
+            $('#fotoplato').attr('src',$('.platoP').first().attr('src'));
+            $('#precioplato').html($('.precio3').first().text());
+            $('#textoplato').html($('.platoP').first().attr('alt'));
+    //    });
     };
     this.render = function() {
         this.el.html(Handlebars.templates.verPlatosCategoria(platos));
@@ -21,6 +25,11 @@ var VerPlatosCategoria = function (adapter, platos) {
         adapter.encontrarPlatosIdioma(idioma, parseInt(categ)).done(function(platos) {
             $('body').html(new VerPlatosCategoria(adapter, platos).render());
         });
+    };
+    this.mostrarPlato = function() {
+        $('#fotoplato').attr('src',$(this).attr('src'));
+        $('#precioplato').html($(this).next().text());
+        $('#textoplato').html($(this).attr('alt'));
     };
     this.inicializar();
 }
