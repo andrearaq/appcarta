@@ -235,6 +235,8 @@ a {
 .platoG {
     float: left;
     width: 75%;
+    height: 525px;
+    overflow: hidden;
     text-align: center;
     border: 1px solid #fff;
     margin-top: 15px;
@@ -257,9 +259,12 @@ a {
 .listaplatos{
     margin: 0px;
     padding: 0px;
+    margin-top: 20px;
     width: 20%;
+    height: 500px;
     text-align: center;
     float: right;
+    overflow: auto;
   /*  border: 1px solid #fff;*/
 }
 .plato2 img {
@@ -270,7 +275,11 @@ a {
     border: 2px solid #D8D8D8;
 }
 .platoP {
-    
+    opacity: 0.8;
+}
+.plato2 img:hover {
+    border-color: #58ACFA;
+    opacity: 1;
 }
 #textoplato {
     color: #FFF;
@@ -372,7 +381,7 @@ footer {
     border-top: 1px solid #595b5b;
 }
 
-.topcoat-button-bar__button:hover, .topcoat-button-bar__item:hover, .plato2 img:hover, .imgracion:hover {
+.topcoat-button-bar__button:hover, .topcoat-button-bar__item:hover, .imgracion:hover {
     border-color: #58ACFA;
 }
 .topcoat-button-bar__item img {

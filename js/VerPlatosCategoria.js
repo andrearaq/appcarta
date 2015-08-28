@@ -21,6 +21,7 @@ var VerPlatosCategoria = function (adapter, platos) {
             $('body').html(new VerPlatosCategoria(adapter, platos).render());
         });
     };
+    
     this.mostrarPlato = function() {
         $('#fotoplato').attr('src',$(this).attr('src'));
         $('#precioplato').html($(this).next().text());

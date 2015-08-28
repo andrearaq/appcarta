@@ -23,9 +23,11 @@
     <div class="platoG"> 
         {{#.}}
             <img class="platogrande" id="fotoplato" src="img/{{imagen}}"/>
-            <span class="precio" id="precioplato"></span>
-            <p id="textoplato"></p>
-            <span id="ale"><img id="alergenos" /></span>
+            <span class="precio" id="precioplato">{{precio}} €</span>
+            <p id="textoplato">{{nomplato}}</p>
+            {{#if alergenos}}
+                <span id="ale"><img id="alergenos" src="img/{{alergenos}}"/></span>
+            {{/if}}
         {{/.}}
         
     </div>
@@ -40,7 +42,7 @@
              <br/>
             <span class="nomplato2">{{nombre}}</span>
           </div>
-        {{/.}}
+        {{/.}}{{nomplato}}
     </div>
     
 </div>
