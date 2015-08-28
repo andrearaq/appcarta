@@ -165,13 +165,13 @@ templates['verPlatosCategoria'] = template({"1":function(depth0,helpers,partials
     + alias3(((helper = (helper = helpers.imagen || (depth0 != null ? depth0.imagen : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"imagen","hash":{},"data":data}) : helper)))
     + "\" alt=\""
     + alias3(((helper = (helper = helpers.nomplato || (depth0 != null ? depth0.nomplato : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomplato","hash":{},"data":data}) : helper)))
-    + "\" />\r\n             <span class=\"precio3\"> "
+    + "\" />\r\n              <span class=\"precio3\"> "
     + alias3(((helper = (helper = helpers.precio || (depth0 != null ? depth0.precio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"precio","hash":{},"data":data}) : helper)))
     + " €</span>\r\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.alergenos : depth0),{"name":"if","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "             <br/>\r\n            <span class=\"nomplato2\">"
     + alias3(((helper = (helper = helpers.nombre || (depth0 != null ? depth0.nombre : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nombre","hash":{},"data":data}) : helper)))
-    + "</span>\r\n          </div>\r\n        ";
+    + "</span>\r\n          </div>\r\n";
 },"7":function(depth0,helpers,partials,data) {
     var helper;
 
@@ -179,16 +179,15 @@ templates['verPlatosCategoria'] = template({"1":function(depth0,helpers,partials
     + this.escapeExpression(((helper = (helper = helpers.alergenos || (depth0 != null ? depth0.alergenos : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"alergenos","hash":{},"data":data}) : helper)))
     + "\"/>\r\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=this.lambda, alias2=helpers.blockHelperMissing;
+    var stack1, alias1=this.lambda, alias2=helpers.blockHelperMissing;
 
   return "<div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center \">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n</div>\r\n<div class=\"verplatos\">\r\n    <div class=\"platoG\"> \r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        \r\n    </div>\r\n    <div class=\"listaplatos\">\r\n"
+    + "        \r\n    </div>\r\n    <div class=\"listaplatos\">\r\n        \r\n"
     + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + this.escapeExpression(((helper = (helper = helpers.nomplato || (depth0 != null ? depth0.nomplato : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"nomplato","hash":{},"data":data}) : helper)))
-    + "\r\n    </div>\r\n    \r\n</div>\r\n<footer>\r\n <h3>Copyright @Restaurante Antonio 2015</h3>\r\n</footer>";
+    + "       \r\n    </div>\r\n    \r\n</div>\r\n<footer>\r\n <h3>Copyright @Restaurante Antonio 2015</h3>\r\n</footer>";
 },"useData":true});
 templates['verPlatosCategoria0'] = template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;

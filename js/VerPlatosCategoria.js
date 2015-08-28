@@ -4,7 +4,6 @@ var VerPlatosCategoria = function (adapter, platos) {
         this.el = $('<div/>');
         this.el.on('click', '.flag', this.encontrarPlatos);
         this.el.on('click', '.platoP', this.mostrarPlato);
-        this.el.on('change', '.plato2', this.mostrarPrimerPlato);
     };
     this.render = function() {
         this.el.html(Handlebars.templates.verPlatosCategoria(platos));
@@ -28,18 +27,6 @@ var VerPlatosCategoria = function (adapter, platos) {
         $('#textoplato').html($(this).attr('alt'));
         $('#alergenos').attr('src',$(this).next().next().attr('src'));
     };
-    this.mostrarPrimerPlato = function() {
-        console.log('se produjo evento load');
-        $('#fotoplato').attr('src',$(this).first().attr('src'));
-        $('#precioplato').html($('.precio3').first().text());
-        $('#textoplato').html($('.platoP').first().attr('alt'));
-    };
+    
     this.inicializar();
 }
-/*
-<div class="platoG">       
-        <img class="platogrande" id="fotoplato"/>
-        <span class="precio" id="precioplato"></span>
-        <p id="textoplato"></p>
-        <span id="ale"><img id="alergenos" /></span>
-    </div>*/
