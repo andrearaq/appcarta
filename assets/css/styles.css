@@ -100,11 +100,13 @@ a {
     overflow: auto;
 /*iOS 4 or lower required an esoteric two finger gesture to scroll elements but normality was achieved from iOS 5. Unlike other browsers, while overflow:auto works, momentum scrolling is disabled unless you also add -webkit-overflow-scrolling: touch.*/
     -webkit-overflow-scrolling: touch;
- /*   position: absolute;
-    top: 141px;
+    position: absolute;
+   /* top: 141px;*/
+    top: 65px;
     bottom: 0px;
     left: 0px;
-    right: 0px;*/
+    right: 0px;
+    margin: auto;
 }
 
 .chevron {

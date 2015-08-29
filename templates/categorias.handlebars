@@ -17,17 +17,18 @@
         <img src="img/logo2.png"/>
     </div>
 </div>
-
-<div class="conjunto">
-    {{#.}}
-     <a href='#categoria/{{cid}}/{{nomcateg}}'>
-         <button class="topcoat-button--large--cta" id="bcateg">
-            <p>{{nomcateg}} <span class="chevron"></span></p>
-             <img class="imgboton" src="img/categorias/{{cimagen}}">   
-         </button>
-     </a>
-    {{/.}}
+<div class="scroller">
+    <div class="conjunto">
+        {{#.}}
+         <a href='#categoria/{{cid}}/{{nomcateg}}'>
+             <button class="topcoat-button--large--cta" id="bcateg">
+                <p>{{nomcateg}} <span class="chevron"></span></p>
+                 <img class="imgboton" src="img/categorias/{{cimagen}}">   
+             </button>
+         </a>
+        {{/.}}
+    </div>
+    <footer>
+     <h3>Copyright @Restaurante Antonio 2015</h3>
+    </footer>
 </div>
-<footer>
- <h3>Copyright @Restaurante Antonio 2015</h3>
-</footer>
