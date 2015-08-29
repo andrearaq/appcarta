@@ -39,8 +39,8 @@ a {
 
 /*Las imágenes en la lista, con un ancho fijo, y el texto a su derecha:*/
 .list > li img {
-    width: 160px;
-    height: 140px;
+    width: 220px;
+    height: 160px;
     float: left;
     margin-right: 8px;
 }
@@ -211,6 +211,7 @@ a {
 }
 .imgracion {
     border: 2px solid #D8D8D8;
+    padding: 4px;
 }
 .imgbebida {
     border: 2px solid #D8D8D8;
@@ -236,7 +237,7 @@ a {
 .platoG {
     float: left;
     width: 75%;
-    height: 525px;
+    height: 532px;
     overflow: hidden;
     text-align: center;
     margin-top: 15px;
