@@ -39,8 +39,8 @@ a {
 
 /*Las imágenes en la lista, con un ancho fijo, y el texto a su derecha:*/
 .list > li img {
-    width: 220px;
-    height: 160px;
+    width: 230px;
+    height: 170px;
     float: left;
     margin-right: 8px;
 }
@@ -73,8 +73,8 @@ a {
     font-size: 24px;
 }
 .list3 > li img {
-    width: 80px;
-    height: 118px;
+    width: 90px;
+    height: 128px;
     float: left;
     margin-right: 20px;
 }
@@ -123,8 +123,8 @@ a {
     background: transparent url(../img/next_blue.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 31px;
-    height: 31px;
+    width: 33px;
+    height: 33px;
     position: absolute;
     right:12px;
     top: 98px;
@@ -217,9 +217,12 @@ a {
 .imgracion {
     border: 2px solid #D8D8D8;
     padding: 4px;
+    border-radius: 6px;
 }
+
 .imgbebida {
     border: 2px solid #D8D8D8;
+    border-radius: 6px;
 }
 .imgmenu {
     border: 3px solid #58ACFA;
@@ -370,10 +373,14 @@ a {
 }
 .idiomas {
     margin-left: 140px;
+    margin-top: 15px; 
 }   
 .idiomas img {
-    margin-top: 25px;
-    margin-left: 1px;
+    margin-left: 7px;
+}
+.idiomas1 img {
+    margin-top: 15px;
+    margin-left: 7px;
 }
 .flag:hover {
     border: 1px solid #58ACFA;
