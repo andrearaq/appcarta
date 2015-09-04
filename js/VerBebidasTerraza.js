@@ -5,7 +5,7 @@ var VerBebidasTerraza = function (adapter, platos) {
        this.el.on('click', '.flag', this.encontrarBebidas);
     };
     this.render = function() {
-        this.el.html(Handlebars.templates.VerBebidasTerraza(platos));
+        this.el.html(Handlebars.templates.verBebidasTerraza(platos));
         return this.el;
     };
     this.encontrarBebidas = function() {

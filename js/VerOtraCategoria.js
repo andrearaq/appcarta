@@ -5,7 +5,7 @@ var VerOtraCategoria = function (adapter, platos) {
        this.el.on('click', '.flag', this.encontrarRaciones);
     };
     this.render = function() {
-        this.el.html(Handlebars.templates.VerOtraCategoria(platos));
+        this.el.html(Handlebars.templates.verOtraCategoria(platos));
         return this.el;
     };
     this.encontrarRaciones = function() {
