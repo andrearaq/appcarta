@@ -1,192 +1,342 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-templates['categorias'] = template({"1":function(depth0,helpers,partials,data) {
-    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+templates['categorias'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
 
-  return "         <a href='#categoria/"
-    + alias3(((helper = (helper = helpers.cid || (depth0 != null ? depth0.cid : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"cid","hash":{},"data":data}) : helper)))
-    + "/"
-    + alias3(((helper = (helper = helpers.nomcateg || (depth0 != null ? depth0.nomcateg : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomcateg","hash":{},"data":data}) : helper)))
-    + "'>\r\n             <button class=\"topcoat-button--large--cta\" id=\"bcateg\">\r\n                <p>"
-    + alias3(((helper = (helper = helpers.nomcateg || (depth0 != null ? depth0.nomcateg : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomcateg","hash":{},"data":data}) : helper)))
-    + " <span class=\"chevron\"></span></p>\r\n                 <img class=\"imgboton\" src=\"img/categorias/"
-    + alias3(((helper = (helper = helpers.cimagen || (depth0 != null ? depth0.cimagen : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"cimagen","hash":{},"data":data}) : helper)))
-    + "\">   \r\n             </button>\r\n         </a>\r\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1;
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n         <a href='#categoria/";
+  if (helper = helpers.cid) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.cid); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/";
+  if (helper = helpers.nomcateg) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomcateg); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "'>\r\n             <button class=\"topcoat-button--large--cta\" id=\"bcateg\">\r\n                <p>";
+  if (helper = helpers.nomcateg) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomcateg); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " <span class=\"chevron\"></span></p>\r\n                 <img class=\"imgboton\" src=\"img/categorias/";
+  if (helper = helpers.cimagen) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.cimagen); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">   \r\n             </button>\r\n         </a>\r\n        ";
+  return buffer;
+  }
 
-  return "<div class=\"topcoat-navigation-bar fijo\">\r\n     <div class=\"topcoat-navigation-bar__item left quarter\">\r\n        <a class=\"topcoat-icon-button--quiet back-button\" href=\"#\">\r\n             <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n        </a>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center\">\r\n        <h1 class=\"topcoat-navigation-bar__title\">Carta Restaurante Antonio</h1>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center quarter idiomas1\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\"/>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center quarter\">\r\n        <img src=\"img/logo2.png\"/>\r\n    </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"conjunto\">\r\n"
-    + ((stack1 = helpers.blockHelperMissing.call(depth0,this.lambda(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
-},"useData":true});
-templates['home'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<div class=\"topcoat-navigation-bar\">\r\n    <span><img src=\"img/logo2.png\"/></span>\r\n    <div class=\"topcoat-navigation-bar__item center\">\r\n        <h1 class=\"topcoat-navigation-bar__title\">Carta de Restaurante Antonio</h1>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center\">\r\n        <img src=\"img/direccion.png\"/>\r\n    </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"inicio\">\r\n       <img class=\"imginicio\" src=\"img/Pared.jpg\"/>\r\n    </div>\r\n\r\n    <div class=\"topcoat-button-bar full\">\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/1'><button class=\"topcoat-button-bar__button full\" id=\"es\"><img src=\"img/Spain.png\"/></button></a>\r\n       </div>\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/2'><button class=\"topcoat-button-bar__button full\" id=\"uk\"><img src=\"img/UK.png\"/></button></a>\r\n       </div>\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/3'><button class=\"topcoat-button-bar__button full\" id=\"fr\"><img src=\"img/France.png\"/></button></a>\r\n       </div>\r\n        <div class=\"topcoat-button-bar__item\">\r\n            <a href='#categorias/4'><button class=\"topcoat-button-bar__button full\" id=\"it\"><img src=\"img/Italy.png\"/></button></a>\r\n       </div>\r\n    </div>\r\n\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
-},"useData":true});
-templates['verBebidas'] = template({"1":function(depth0,helpers,partials,data) {
-    var helper;
+  buffer += "<div class=\"topcoat-navigation-bar fijo\">\r\n     <div class=\"topcoat-navigation-bar__item left quarter\">\r\n        <a class=\"topcoat-icon-button--quiet back-button\" href=\"#\">\r\n             <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n        </a>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center\">\r\n        <h1 class=\"topcoat-navigation-bar__title\">Carta Restaurante Antonio</h1>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center quarter idiomas1\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\"/>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center quarter\">\r\n        <img src=\"img/logo2.png\"/>\r\n    </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"conjunto\">\r\n        ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  return buffer;
+  });
+templates['home'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
 
-  return "            <h1 class=\"topcoat-navigation-bar__title\">"
-    + this.escapeExpression(((helper = (helper = helpers.nomcateg || (depth0 != null ? depth0.nomcateg : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"nomcateg","hash":{},"data":data}) : helper)))
-    + "</h1>\r\n";
-},"3":function(depth0,helpers,partials,data) {
-    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "             <li class=\"topcoat-list__item\">\r\n                    <img class=\"imgbebida\" src=\"img/bebidas/"
-    + alias3(((helper = (helper = helpers.imagen || (depth0 != null ? depth0.imagen : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"imagen","hash":{},"data":data}) : helper)))
-    + "\">\r\n                    <p><span class=\"nomplato\">"
-    + alias3(((helper = (helper = helpers.nomplato || (depth0 != null ? depth0.nomplato : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomplato","hash":{},"data":data}) : helper)))
-    + "</span> <span class=\"precio\"> "
-    + alias3(((helper = (helper = helpers.precio || (depth0 != null ? depth0.precio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"precio","hash":{},"data":data}) : helper)))
-    + " € </span> </p> \r\n              </li>\r\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda, alias2=helpers.blockHelperMissing;
+  return "<div class=\"topcoat-navigation-bar\">\r\n    <span><img src=\"img/logo2.png\"/></span>\r\n    <div class=\"topcoat-navigation-bar__item center half\">\r\n        <h1 class=\"topcoat-navigation-bar__title\">Carta de Restaurante Antonio</h1>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center quarter\">\r\n        <img src=\"img/direccion.png\"/>\r\n    </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"inicio\">\r\n       <img class=\"imginicio\" src=\"img/Pared.jpg\"/>\r\n    </div>\r\n\r\n    <div class=\"topcoat-button-bar full\">\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/1'><button class=\"topcoat-button-bar__button full\" id=\"es\"><img src=\"img/Spain.png\"/></button></a>\r\n       </div>\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/2'><button class=\"topcoat-button-bar__button full\" id=\"uk\"><img src=\"img/UK.png\"/></button></a>\r\n       </div>\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/3'><button class=\"topcoat-button-bar__button full\" id=\"fr\"><img src=\"img/France.png\"/></button></a>\r\n       </div>\r\n        <div class=\"topcoat-button-bar__item\">\r\n            <a href='#categorias/4'><button class=\"topcoat-button-bar__button full\" id=\"it\"><img src=\"img/Italy.png\"/></button></a>\r\n       </div>\r\n    </div>\r\n\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  });
+templates['verBebidas'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
 
-  return "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Bebidas\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Drinks\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Boissons\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Bevande\"/>\r\n    </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list3\" >\r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
-},"useData":true});
-templates['verBebidasTerraza'] = template({"1":function(depth0,helpers,partials,data) {
-    var helper;
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n            <h1 class=\"topcoat-navigation-bar__title\">";
+  if (helper = helpers.nomcateg) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomcateg); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</h1>\r\n            ";
+  return buffer;
+  }
 
-  return "            <h1 class=\"topcoat-navigation-bar__title\">"
-    + this.escapeExpression(((helper = (helper = helpers.nomcateg || (depth0 != null ? depth0.nomcateg : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"nomcateg","hash":{},"data":data}) : helper)))
-    + "</h1>\r\n";
-},"3":function(depth0,helpers,partials,data) {
-    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n             <li class=\"topcoat-list__item\">\r\n                    <img class=\"imgbebida\" src=\"img/bebidas/";
+  if (helper = helpers.imagen) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.imagen); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\r\n                    <p><span class=\"nomplato\">";
+  if (helper = helpers.nomplato) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomplato); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</span> <span class=\"precio\"> ";
+  if (helper = helpers.precio) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.precio); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " € </span> </p> \r\n              </li>\r\n            ";
+  return buffer;
+  }
 
-  return "                <li class=\"topcoat-list__item\">\r\n                    <p><span class=\"nomplato\">"
-    + alias3(((helper = (helper = helpers.nomplato || (depth0 != null ? depth0.nomplato : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomplato","hash":{},"data":data}) : helper)))
-    + "</span> <span class=\"precio\">"
-    + alias3(((helper = (helper = helpers.precio || (depth0 != null ? depth0.precio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"precio","hash":{},"data":data}) : helper)))
-    + " €</span></p>\r\n              </li>\r\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda, alias2=helpers.blockHelperMissing;
+  buffer += "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Bebidas\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Drinks\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Boissons\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Bevande\"/>\r\n    </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list3\" >\r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  return buffer;
+  });
+templates['verBebidasTerraza'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
 
-  return " <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Bebidas Terraza\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Terrace drinks\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Boissons terrasse\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Bevande terraza\"/>\r\n    </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
-},"useData":true});
-templates['verMenu'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n            <h1 class=\"topcoat-navigation-bar__title\">";
+  if (helper = helpers.nomcateg) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomcateg); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</h1>\r\n            ";
+  return buffer;
+  }
 
-  return "<div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center half\">\r\n            <h1 class=\"topcoat-navigation-bar__title\">"
-    + alias3(((helper = (helper = helpers.nommenu || (depth0 != null ? depth0.nommenu : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nommenu","hash":{},"data":data}) : helper)))
-    + " <span class=\"precio2\">"
-    + alias3(((helper = (helper = helpers.precio || (depth0 != null ? depth0.precio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"precio","hash":{},"data":data}) : helper)))
-    + " €</span></h1>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center half\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n<div>\r\n <div class=\"scroller\">\r\n    <div class=\"vermenu\">\r\n        <img class=\"imgmenu\" src=\"img/menus/"
-    + alias3(((helper = (helper = helpers.fotomenu || (depth0 != null ? depth0.fotomenu : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"fotomenu","hash":{},"data":data}) : helper)))
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n                <li class=\"topcoat-list__item\">\r\n                    <p><span class=\"nomplato\">";
+  if (helper = helpers.nomplato) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomplato); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</span> <span class=\"precio\">";
+  if (helper = helpers.precio) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.precio); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " €</span></p>\r\n              </li>\r\n            ";
+  return buffer;
+  }
+
+  buffer += " <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n        <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Bebidas Terraza\"/>\r\n        <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Terrace drinks\"/>\r\n        <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Boissons terrasse\"/>\r\n        <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Bevande terraza\"/>\r\n    </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  return buffer;
+  });
+templates['verMenu'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  buffer += "<div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center half\">\r\n            <h1 class=\"topcoat-navigation-bar__title\">";
+  if (helper = helpers.nommenu) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nommenu); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " <span class=\"precio2\">";
+  if (helper = helpers.precio) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.precio); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " €</span></h1>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center half\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n<div>\r\n <div class=\"scroller\">\r\n    <div class=\"vermenu\">\r\n        <img class=\"imgmenu\" src=\"img/menus/";
+  if (helper = helpers.fotomenu) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.fotomenu); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
     + "\" />\r\n    </div>\r\n\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
-},"useData":true});
-templates['verMenus'] = template({"1":function(depth0,helpers,partials,data) {
-    var helper;
+  return buffer;
+  });
+templates['verMenus'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
 
-  return "            <h1 class=\"topcoat-navigation-bar__title\">"
-    + this.escapeExpression(((helper = (helper = helpers.nomcateg || (depth0 != null ? depth0.nomcateg : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"nomcateg","hash":{},"data":data}) : helper)))
-    + "</h1>\r\n";
-},"3":function(depth0,helpers,partials,data) {
-    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n            <h1 class=\"topcoat-navigation-bar__title\">";
+  if (helper = helpers.nomcateg) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomcateg); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</h1>\r\n            ";
+  return buffer;
+  }
 
-  return "             <li class=\"topcoat-list__item\">\r\n                 <a href=\"#menu/"
-    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\r\n                     <img class=\"imgracion\" src=\"img/raciones/"
-    + alias3(((helper = (helper = helpers.imagen || (depth0 != null ? depth0.imagen : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"imagen","hash":{},"data":data}) : helper)))
-    + "\">\r\n                     <p><span class=\"nomplato\">"
-    + alias3(((helper = (helper = helpers.nomplato || (depth0 != null ? depth0.nomplato : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomplato","hash":{},"data":data}) : helper)))
-    + "</span> <span class=\"precio\"> "
-    + alias3(((helper = (helper = helpers.precio || (depth0 != null ? depth0.precio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"precio","hash":{},"data":data}) : helper)))
-    + " € </span>\r\n                         <span class=\"chevron2\"></span></p> \r\n                 </a>\r\n              </li>\r\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda, alias2=helpers.blockHelperMissing;
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n             <li class=\"topcoat-list__item\">\r\n                 <a href=\"#menu/";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\r\n                     <img class=\"imgracion\" src=\"img/raciones/";
+  if (helper = helpers.imagen) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.imagen); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\r\n                     <p><span class=\"nomplato\">";
+  if (helper = helpers.nomplato) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomplato); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</span> <span class=\"precio\"> ";
+  if (helper = helpers.precio) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.precio); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " € </span>\r\n                         <span class=\"chevron2\"></span></p> \r\n                 </a>\r\n              </li>\r\n            ";
+  return buffer;
+  }
 
-  return "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Menus\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Menu\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Menus\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Menus\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n    </div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
-},"useData":true});
-templates['verOtraCategoria'] = template({"1":function(depth0,helpers,partials,data) {
-    var helper;
+  buffer += "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Menus\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Menu\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Menus\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Menus\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n    </div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  return buffer;
+  });
+templates['verOtraCategoria'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
 
-  return "            <h1 class=\"topcoat-navigation-bar__title\">"
-    + this.escapeExpression(((helper = (helper = helpers.nomcateg || (depth0 != null ? depth0.nomcateg : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"nomcateg","hash":{},"data":data}) : helper)))
-    + "</h1>\r\n";
-},"3":function(depth0,helpers,partials,data) {
-    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n            <h1 class=\"topcoat-navigation-bar__title\">";
+  if (helper = helpers.nomcateg) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomcateg); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</h1>\r\n            ";
+  return buffer;
+  }
 
-  return "             <li class=\"topcoat-list__item\">\r\n                    <img class=\"imgracion\" src=\"img/raciones/"
-    + alias3(((helper = (helper = helpers.imagen || (depth0 != null ? depth0.imagen : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"imagen","hash":{},"data":data}) : helper)))
-    + "\">\r\n                    <p><span class=\"nomplato\">"
-    + alias3(((helper = (helper = helpers.nomplato || (depth0 != null ? depth0.nomplato : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomplato","hash":{},"data":data}) : helper)))
-    + "</span> <span class=\"precio\"> "
-    + alias3(((helper = (helper = helpers.precio || (depth0 != null ? depth0.precio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"precio","hash":{},"data":data}) : helper)))
-    + " € </span> </p> \r\n              </li>\r\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda, alias2=helpers.blockHelperMissing;
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n             <li class=\"topcoat-list__item\">\r\n                    <img class=\"imgracion\" src=\"img/raciones/";
+  if (helper = helpers.imagen) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.imagen); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\r\n                    <p><span class=\"nomplato\">";
+  if (helper = helpers.nomplato) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomplato); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</span> <span class=\"precio\"> ";
+  if (helper = helpers.precio) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.precio); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " € </span> </p> \r\n              </li>\r\n            ";
+  return buffer;
+  }
 
-  return "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Raciones\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Servings\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Portions\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Porzioni\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
-},"useData":true});
-templates['verPlatosCategoria'] = template({"1":function(depth0,helpers,partials,data) {
-    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+  buffer += "   <div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"Raciones\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"Servings\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"Portions\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"Porzioni\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center\">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  return buffer;
+  });
+templates['verPlatosCategoria'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
 
-  return "            <h1 class=\"topcoat-navigation-bar__title\" id=\"categ\">"
-    + alias3(((helper = (helper = helpers.nomcateg || (depth0 != null ? depth0.nomcateg : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomcateg","hash":{},"data":data}) : helper)))
-    + "</h1><span id=\"numcateg\">"
-    + alias3(((helper = (helper = helpers.cid || (depth0 != null ? depth0.cid : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"cid","hash":{},"data":data}) : helper)))
-    + "</span>\r\n";
-},"3":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n            <h1 class=\"topcoat-navigation-bar__title\" id=\"categ\">";
+  if (helper = helpers.nomcateg) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomcateg); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</h1><span id=\"numcateg\">";
+  if (helper = helpers.cid) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.cid); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</span>\r\n            ";
+  return buffer;
+  }
 
-  return "                <img class=\"platogrande\" id=\"fotoplato\" src=\"img/"
-    + alias3(((helper = (helper = helpers.imagen || (depth0 != null ? depth0.imagen : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"imagen","hash":{},"data":data}) : helper)))
-    + "\"/>\r\n                <span class=\"precio\" id=\"precioplato\">"
-    + alias3(((helper = (helper = helpers.precio || (depth0 != null ? depth0.precio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"precio","hash":{},"data":data}) : helper)))
-    + " €</span>\r\n                <p id=\"textoplato\">"
-    + alias3(((helper = (helper = helpers.nomplato || (depth0 != null ? depth0.nomplato : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomplato","hash":{},"data":data}) : helper)))
-    + "</p>\r\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.alergenos : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
-},"4":function(depth0,helpers,partials,data) {
-    var helper;
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n                <img class=\"platogrande\" id=\"fotoplato\" src=\"img/";
+  if (helper = helpers.imagen) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.imagen); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\"/>\r\n                <span class=\"precio\" id=\"precioplato\">";
+  if (helper = helpers.precio) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.precio); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " €</span>\r\n                <p id=\"textoplato\">";
+  if (helper = helpers.nomplato) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomplato); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</p>\r\n                ";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.alergenos), {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n            ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n                    <span id=\"ale\"><img id=\"alergenos\" src=\"img/";
+  if (helper = helpers.alergenos) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.alergenos); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\"/></span>\r\n                ";
+  return buffer;
+  }
 
-  return "                    <span id=\"ale\"><img id=\"alergenos\" src=\"img/"
-    + this.escapeExpression(((helper = (helper = helpers.alergenos || (depth0 != null ? depth0.alergenos : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"alergenos","hash":{},"data":data}) : helper)))
-    + "\"/></span>\r\n";
-},"6":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+function program6(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n              <div class=\"plato2\">\r\n                 <img class=\"platoP\" src=\"img/";
+  if (helper = helpers.imagen) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.imagen); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"";
+  if (helper = helpers.nomplato) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nomplato); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" />\r\n                  <span class=\"precio3\"> ";
+  if (helper = helpers.precio) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.precio); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " €</span>\r\n                 ";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.alergenos), {hash:{},inverse:self.noop,fn:self.program(7, program7, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n                 <br/>\r\n                <span class=\"nomplato2\">";
+  if (helper = helpers.nombre) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nombre); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</span>\r\n              </div>\r\n            ";
+  return buffer;
+  }
+function program7(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n                    <img id=\"alerg\" src=\"img/";
+  if (helper = helpers.alergenos) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.alergenos); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\"/>\r\n                 ";
+  return buffer;
+  }
 
-  return "              <div class=\"plato2\">\r\n                 <img class=\"platoP\" src=\"img/"
-    + alias3(((helper = (helper = helpers.imagen || (depth0 != null ? depth0.imagen : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"imagen","hash":{},"data":data}) : helper)))
-    + "\" alt=\""
-    + alias3(((helper = (helper = helpers.nomplato || (depth0 != null ? depth0.nomplato : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nomplato","hash":{},"data":data}) : helper)))
-    + "\" />\r\n                  <span class=\"precio3\"> "
-    + alias3(((helper = (helper = helpers.precio || (depth0 != null ? depth0.precio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"precio","hash":{},"data":data}) : helper)))
-    + " €</span>\r\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.alergenos : depth0),{"name":"if","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "                 <br/>\r\n                <span class=\"nomplato2\">"
-    + alias3(((helper = (helper = helpers.nombre || (depth0 != null ? depth0.nombre : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nombre","hash":{},"data":data}) : helper)))
-    + "</span>\r\n              </div>\r\n";
-},"7":function(depth0,helpers,partials,data) {
-    var helper;
-
-  return "                    <img id=\"alerg\" src=\"img/"
-    + this.escapeExpression(((helper = (helper = helpers.alergenos || (depth0 != null ? depth0.alergenos : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"alergenos","hash":{},"data":data}) : helper)))
-    + "\"/>\r\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda, alias2=helpers.blockHelperMissing;
-
-  return "<div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center \">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"verplatos\">\r\n        <div class=\"platoG\"> \r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\r\n        </div>\r\n        <div class=\"listaplatos\">\r\n\r\n"
-    + ((stack1 = alias2.call(depth0,alias1(depth0, depth0),{"name":".","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\r\n        </div>\r\n\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
-},"useData":true});
+  buffer += "<div class=\"topcoat-navigation-bar fijo\">\r\n        <div class=\"topcoat-navigation-bar__item left quarter\">\r\n            <a class=\"topcoat-icon-button--quiet back-button\" href=\"javascript:window.history.back();\">\r\n                <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n            </a>\r\n        </div>\r\n        <div class=\"topcoat-navigation-bar__item center quarter\">\r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center quarter idiomas\">\r\n            <img class=\"flag\" id=\"1\" src=\"img/es.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"2\" src=\"img/ukp.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"3\" src=\"img/fr.png\" alt=\"\"/>\r\n            <img class=\"flag\" id=\"4\" src=\"img/it.png\" alt=\"\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center \">\r\n            <img src=\"img/logo2.png\"/>\r\n        </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"verplatos\">\r\n        <div class=\"platoG\"> \r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n\r\n        </div>\r\n        <div class=\"listaplatos\">\r\n\r\n            ";
+  stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(6, program6, data),data:data}));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n\r\n        </div>\r\n\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  return buffer;
+  });
 })();
