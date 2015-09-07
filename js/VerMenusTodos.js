@@ -8,6 +8,7 @@ var VerMenusTodos = function (adapter, platos) {
         this.el.html(Handlebars.templates.verMenus(platos));
         return this.el;
     };
+    // mostrar menus segun el idioma indicado por la bandera pulsada
     this.encontrarMenus = function() {
         //agregar pagina con cambio de idioma al history del navegador
         window.history.pushState({}, null, '#categorias/'+$(this).attr('id'));

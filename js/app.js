@@ -1,8 +1,7 @@
-// Utlizaremos una función anónima autoejecutable de modo que nuestras variables no sean globales. Más info: http://www.formandome.es/javascript/objetos-variables-funciones-javascript/
-
+// Utlizaremos una función anónima autoejecutable de modo que nuestras variables no sean globales. 
 (function () {
     /* ---------------------------------- Variables locales ---------------------------------- */
-   var adapter = new WebSqlAdapter();
+    var adapter = new WebSqlAdapter();
     var categoriasURL = /^#categorias\/(\d{1,})/;
     var categoriaURL = /^#categoria\/(\d{1,})\/\w+/;
     var menuURL = /^#menu\/(\d{2,})/;
@@ -30,7 +29,6 @@
     /* ---------------------------------- Funciones locales ---------------------------------- */    
       function route() {
         var hash = window.location.hash;
-          console.log("valor de hash: "+hash);
         if (!hash) {
             $('body').html(new HomeView(adapter).render());
             return;
@@ -39,9 +37,7 @@
         var match = hash.match(categoriasURL);
         var idioma = null;
         if (match) {
-            console.log("dentro de match categoriasURL");
             idioma = match[1];
-            console.log("idioma "+idioma);
             adapter.encontrarCategoriaIdioma(idioma).done(function(categorias) {
                 $('body').html(new Categorias(adapter, categorias).render());
             });
@@ -52,29 +48,32 @@
         var idioma=null;
         if (match) {
             idioma = localStorage['idioma'];
-            console.log("dentro de match categoriaURL - localStorage[idioma]: "+localStorage['idioma']);
-            console.log("dentro de match categoriaURL - idioma: "+idioma);
             categ = match[1];
+            // Categorias: entrantes frios, entrantes calientes, carnes, pescados y postres
             if (categ=="1" || categ=="2" || categ=="3" || categ=="4" || categ=="5") {
                 adapter.encontrarPlatosIdioma(idioma, parseInt(categ)).done(function(platos) {
                     $('body').html(new VerPlatosCategoria(adapter, platos).render());
                 });
             }
+            // Categoria: raciones
             if (categ=="6") {
                 adapter.encontrarPlatosIdioma(idioma, parseInt(categ)).done(function(platos) {
                     $('body').html(new VerOtraCategoria(adapter, platos).render());
                 });
             }
+            // Categoria: menus
             if (categ=="7") {
                 adapter.encontrarPlatosIdioma(idioma, parseInt(categ)).done(function(platos) {
                     $('body').html(new VerMenusTodos(adapter, platos).render());
                 });
             }
+            // Categoria: bebidas
             if (categ=="8") {
                 adapter.encontrarPlatosIdioma(idioma, parseInt(categ)).done(function(platos) {
                     $('body').html(new VerBebidas(adapter, platos).render());
                 });
             }
+            // Categoria: bebidas terraza
             if (categ=="9") {
                 adapter.encontrarPlatosIdioma(idioma, parseInt(categ)).done(function(platos) {
                     $('body').html(new VerBebidasTerraza(adapter, platos).render());
@@ -86,10 +85,8 @@
         var menu = null;
         if (match) {
             idioma = localStorage['idioma'];
-            console.log("dentro de match menuURL - idioma: "+idioma);
             menu = match[1];
             var m = parseInt(menu)-40;
-            console.log("menu :"+m);
             adapter.encontrarMenusIdioma(idioma, parseInt(m)).done(function(menus) {
                 $('body').html(new VerMenu(adapter, menus).render());
             });

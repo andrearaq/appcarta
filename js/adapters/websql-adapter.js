@@ -27,25 +27,24 @@ var WebSqlAdapter = function () {
         //Los tres parámetros son la transacción en sí, la función de tratamiento de error, y la de todo OK.
         return deferred.promise();
     }
-
+    // encontrar categoria segun el idioma
     this.encontrarCategoriaIdioma = function (id) {
         var deferred = $.Deferred();
         localStorage['idioma'] = id;
-        console.log("dentro de encontrarCategoriaIdioma -> localstorage idioma: "+localStorage['idioma']+" tipo: "+typeof(localStorage['idioma']));
         this.db.transaction(
             function (tx) {
                 var sql="";
                 switch (id) {
-                    case "1":
+                    case "1":  // castellano
                         sql = "SELECT cid, ccastellano AS nomcateg, cimagen FROM categorias ORDER BY cid";
                         break;
-                    case "2":
+                    case "2":  // ingles
                         sql = "SELECT cid, cingles AS nomcateg, cimagen FROM categorias ORDER BY cid";
                         break;
-                    case "3":
+                    case "3":  // frances
                         sql = "SELECT cid, cfrances AS nomcateg, cimagen FROM categorias ORDER BY cid";
                         break;                    
-                    case "4":
+                    case "4":  // italiano
                         sql = "SELECT cid, citaliano AS nomcateg, cimagen FROM categorias ORDER BY cid";
                         break; 
                 }
@@ -65,27 +64,25 @@ var WebSqlAdapter = function () {
         );
         return deferred.promise();
     };
-    
+    // encontrar los platos segun el idioma y la categoria
     this.encontrarPlatosIdioma = function (id, cat) {
         var deferred = $.Deferred();
-        console.log("dentro de encontrar platos. tipo cat: "+typeof(cat));
-        console.log("dentro encontrar platos. localStorage idioma: "+ localStorage['idioma']);
         this.db.transaction(
             function (tx) {
                 switch(id) {
-                    case "1":
+                    case "1":  // castellano
                         var sql = "SELECT a.id, a.nombre, a.castellano as nomplato, a.imagen, a.alergenos, a.precio, b.ccastellano"+
                             " AS nomcateg, b.cid FROM platos as a, categorias as b WHERE a.categoria=? AND b.cid = a.categoria";
                         break;
-                    case "2":
+                    case "2":  // ingles
                         var sql = "SELECT a.id, a.nombre, a.ingles as nomplato, a.imagen, a.alergenos, a.precio, b.cingles AS nomcateg"+
                             ", b.cid FROM platos as a, categorias as b WHERE a.categoria=? AND b.cid = a.categoria";
                         break;
-                    case "3":
+                    case "3":  // frances
                         var sql = "SELECT a.id, a.nombre, a.frances as nomplato, a.imagen, a.alergenos, a.precio, b.cfrances"+
                             " AS nomcateg, b.cid FROM platos as a, categorias as b WHERE a.categoria=? AND b.cid = a.categoria";
                         break;                    
-                    case "4":
+                    case "4":  // italiano
                         var sql = "SELECT a.id, a.nombre, a.italiano as nomplato, a.imagen, a.alergenos, a.precio, b.citaliano"+
                             " AS nomcateg, b.cid FROM platos as a, categorias as b WHERE a.categoria=? AND b.cid = a.categoria";
                         break; 
@@ -106,26 +103,25 @@ var WebSqlAdapter = function () {
         );
         return deferred.promise();
     };
-    
+    // encontrar el menu segun el idioma
     this.encontrarMenusIdioma = function (id, menu) {
         var deferred = $.Deferred();
-        console.log("dentro encontrar menus Idioma. localStorage idioma: "+ localStorage['idioma']);
         this.db.transaction(
             function (tx) {
                 switch(id) {
-                    case "1":
+                    case "1":  // castellano
                         var sql = "SELECT a.id, a.castellano AS fotomenu, a.precio, b.castellano AS nommenu"+
                             " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+40)";
                         break;
-                    case "2":
+                    case "2":  // ingles
                         var sql = "SELECT a.id, a.ingles AS fotomenu, a.precio, b.ingles AS nommenu"+
                             " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+40)";
                         break;
-                    case "3":
+                    case "3":  // frances
                         var sql = "SELECT a.id, a.frances as fotomenu, a.precio, b.frances AS nommenu"+
                             " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+40)";
                         break;                    
-                    case "4":
+                    case "4":  // igialiano
                         var sql = "SELECT a.id, a.italiano as fotomenu, a.precio, b.italiano AS nommenu"+
                             " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+40)";
                         break; 
@@ -223,10 +219,10 @@ var WebSqlAdapter = function () {
             e = categorias[i];
             tx.executeSql(sql, [e.cid, e.ccastellano, e.cingles, e.cfrances, e.citaliano, e.cimagen],
                 function () {
-                    console.log('INSERT OK');
+                    console.log('INSERT categorias OK');
                 },
                 function (tx, error) {
-                    alert('INSERT error: ' + error.message);
+                    alert('INSERT  categorias error: ' + error.message);
                 });
         }
     }
@@ -249,10 +245,10 @@ var WebSqlAdapter = function () {
             e = menus[i];
             tx.executeSql(sql, [e.id, e.castellano, e.ingles, e.frances, e.italiano, e.precio],
                 function () {
-                    console.log('INSERT OK');
+                    console.log('INSERT menus OK');
                 },
                 function (tx, error) {
-                    alert('INSERT error: ' + error.message);
+                    alert('INSERT menus error: ' + error.message);
                 });
         }
     }
@@ -375,10 +371,10 @@ var WebSqlAdapter = function () {
             e = platos[i];
             tx.executeSql(sql, [e.id, e.nombre, e.categoria, e.castellano, e.ingles, e.frances, e.italiano, e.imagen, e.alergenos, e.precio],
                 function () {
-                    console.log('INSERT OK');
+                    console.log('INSERT platos OK');
                 },
                 function (tx, error) {
-                    alert('INSERT error: ' + error.message);
+                    alert('INSERT platos error: ' + error.message);
                 });
         }
     }

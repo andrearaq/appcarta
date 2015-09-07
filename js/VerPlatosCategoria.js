@@ -9,6 +9,7 @@ var VerPlatosCategoria = function (adapter, platos) {
         this.el.html(Handlebars.templates.verPlatosCategoria(platos));
         return this.el;
     };
+    // mostrar platos segun el idioma indicado por la bandera pulsada
     this.encontrarPlatos = function() {
         //agregar pagina con cambio de idioma al history del navegador
         var categ = $('#numcateg').html();
@@ -20,7 +21,7 @@ var VerPlatosCategoria = function (adapter, platos) {
             $('body').html(new VerPlatosCategoria(adapter, platos).render());
         });
     };
-    
+    // ver foto del plato pulsado
     this.mostrarPlato = function() {
         $('#fotoplato').attr('src',$(this).attr('src'));
         $('#precioplato').html($(this).next().text());

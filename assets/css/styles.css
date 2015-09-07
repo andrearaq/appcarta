@@ -1,3 +1,100 @@
+/* media queries */
+@media screen
+    and (device-width: 1024px)
+    and (device-height: 600px)
+    and (orientation: portrait) {
+        
+    .imginicio {
+        width: 580px;
+        heigth: 290px;
+    }
+    #direccion {
+        display: none;
+    }
+    .idiomas1 img {
+        margin-top: 15px;
+        margin-left: 5px;
+        max-width: 80%;
+    }
+    .topcoat-navigation-bar__title {
+      font-size: 1.6rem;
+    }
+}
+@media screen
+    and (device-width: 1024px)
+    and (device-height: 600px)
+    and (orientation: landscape) {
+        
+    .imginicio {
+        width: 800px;
+        heigth: 290px;
+    }   
+        
+        
+        
+}
+
+/*Añadimos para que el header no haga scroll:*/
+.scroller {
+    overflow: auto;
+/*iOS 4 or lower required an esoteric two finger gesture to scroll elements but normality was achieved from iOS 5. Unlike other browsers, while overflow:auto works, momentum scrolling is disabled unless you also add -webkit-overflow-scrolling: touch.*/
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+   /* top: 141px;*/
+    top: 65px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+/* clases de la vista home */
+.inicio {
+    text-align: center;
+    max-width: 100%;
+}
+
+.imginicio{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 3px solid #D8D8D8;
+    max-width: 100%
+}
+.flagG{
+    max-width: 100%;
+}
+
+/* clases de la vista categorias */
+
+.idiomas1 {
+    margin-left: 5%;
+}
+.idiomas1 img {
+    margin-top: 15px;
+    margin-left: 7px;
+    max-width: 100%;
+}
+.conjunto {
+    margin: 0 auto;
+    width: 100%;
+   text-align: center;
+   /* margin-left: 7%;*/
+}
+.imgboton {
+    width: 320px;
+    height: 210px;
+    border: 2px solid #D8D8D8;
+    border-radius: 6px;
+}
+/* clases  vista verBebidas */
+
+
+/* clases  vista verBebidasTerraza */
+
+/* clases  vista verMenus */
+
+/* clases  vista verMenu */
+
+
 a {
     text-decoration: none;
     color: inherit;	
@@ -95,19 +192,7 @@ a {
     color: #fff;
     font-size: 24px;
 }
-/*Añadimos para que el header no haga scroll:*/
-.scroller {
-    overflow: auto;
-/*iOS 4 or lower required an esoteric two finger gesture to scroll elements but normality was achieved from iOS 5. Unlike other browsers, while overflow:auto works, momentum scrolling is disabled unless you also add -webkit-overflow-scrolling: touch.*/
-    -webkit-overflow-scrolling: touch;
-    position: absolute;
-   /* top: 141px;*/
-    top: 65px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin: auto;
-}
+
 
 .chevron {
     background: transparent url(../img/next_blue.svg);
@@ -129,18 +214,8 @@ a {
     right:12px;
     top: 98px;
 }
-/*Todo lo siguiente lo añadimos para modificar la presentación de la vista de jugador:*/
 
-.back-button {
-    position: absolute;
-    top: 10px;
-}
-.topcoat-icon--back {
-    background: url("../img/back_light.svg") no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
+
 .detalles {
     margin: auto;
     /*para no utilizar el top que he puesto en scroller:*/
@@ -182,33 +257,9 @@ a {
 .clearfix{
     clear: both;
 }
-.fijo {
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-}
-.inicio {
-    text-align: center;
-}
 
-.imginicio{
-    margin-top: 2%;
-    margin-bottom: 2%;
-    border: 2px solid #D8D8D8;
-    width: 800px;
-    height: 290px;
-}
 
-.imgboton {
-  /*  width: 220px;
-    height: 110px;*/
-    width: 320px;
-    height: 210px;
-    border: 2px solid #D8D8D8;
-    border-radius: 6px;
-}
+
 .imgboton2 {
     width: 390px;
     height: 280px;
@@ -310,10 +361,7 @@ a {
 .botonplato { 
     white-space: pre-wrap;
 }
-.conjunto {
-    width: 100%;
-    margin-left: 7%;
-}
+
 #precioplato {
     color: #58ACFA;
 }
@@ -368,9 +416,7 @@ a {
 .logo {
     margin-left: 20px;
 }
-.idiomas1 {
-    margin-left: 80px;
-}
+
 .idiomas {
     margin-left: 140px;
     margin-top: 15px; 
@@ -378,10 +424,7 @@ a {
 .idiomas img {
     margin-left: 7px;
 }
-.idiomas1 img {
-    margin-top: 15px;
-    margin-left: 7px;
-}
+
 .flag:hover {
     border: 1px solid #58ACFA;
     padding: 1px;
@@ -395,11 +438,26 @@ footer {
     border-top: 1px solid #595b5b;
 }
 
+/* clases de topcoat modificadas para personalizarlas */
 .topcoat-button-bar__button:hover, .topcoat-button-bar__item:hover, .imgracion:hover {
     border-color: #58ACFA;
 }
 .topcoat-button-bar__item img {
-    margin-top: 8%;
+    vertical-align: middle;
+    padding: 5%;
+}
+.topcoat-button-bar__item {
+    text-align: center;
+}
+.back-button {
+    position: absolute;
+    top: 10px;
+}
+.topcoat-icon--back {
+    background: url("../img/back_light.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 .topcoat-button--large--cta {
  /* font-size: 1.1rem;*/
@@ -441,6 +499,7 @@ footer {
 .topcoat-list__item:first-child {
   border: 0;
 }
+
 .list2 {
   padding: 0;
   margin: 0;

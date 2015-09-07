@@ -8,6 +8,7 @@ var VerOtraCategoria = function (adapter, platos) {
         this.el.html(Handlebars.templates.verOtraCategoria(platos));
         return this.el;
     };
+    // mostrar raciones segun el idioma indicado por la bandera pulsada
     this.encontrarRaciones = function() {
         //agregar pagina con cambio de idioma al history del navegador
         window.history.pushState({}, null, '#categorias/'+$(this).attr('id'));

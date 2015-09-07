@@ -7,6 +7,7 @@ var Categorias = function(adapter, categorias) {
         this.el.html(Handlebars.templates.categorias(categorias));
         return this.el;
     };
+    // mostrar categorias cambiando el idioma dependiendo de la bandera pulsada
     this.encontrarCategoria = function() {
         //agregar pagina con cambio de idioma al history del navegador
         window.history.pushState({}, null, '#categorias/'+$(this).attr('id'));

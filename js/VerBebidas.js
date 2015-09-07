@@ -8,6 +8,7 @@ var VerBebidas = function (adapter, platos) {
         this.el.html(Handlebars.templates.verBebidas(platos));
         return this.el;
     };
+    // mostrar bebidas segun el idioma indicado por la bandera pulsada
     this.encontrarBebidas = function() {
         //agregar pagina con cambio de idioma al history del navegador
         window.history.pushState({}, null, '#categorias/'+$(this).attr('id'));
