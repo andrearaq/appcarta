@@ -2,7 +2,7 @@ var VerMenusTodos = function (adapter, platos) {
     this.inicializar = function () {
         // Definimos un div para la vista. Lo usaremos para añadir eventos.
         this.el = $('<div/>');
-       this.el.on('click', '.flag', this.encontrarMenus);
+       this.el.on('click', '.idiomas img', this.encontrarMenus);
     };
     this.render = function() {
         this.el.html(Handlebars.templates.verMenus(platos));

@@ -1,7 +1,7 @@
 var Categorias = function(adapter, categorias) {
     this.inicializar = function() {
         this.el = $('<div/>');
-        this.el.on('click', '.flag', this.encontrarCategoria);
+        this.el.on('click', '.idiomas img', this.encontrarCategoria);
     };
     this.render = function() {
         this.el.html(Handlebars.templates.categorias(categorias));

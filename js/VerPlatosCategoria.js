@@ -2,7 +2,7 @@ var VerPlatosCategoria = function (adapter, platos) {
     this.inicializar = function () {
         // Definimos un div para la vista. Lo usaremos para añadir eventos.
         this.el = $('<div/>');
-        this.el.on('click', '.flag', this.encontrarPlatos);
+        this.el.on('click', '.idiomas img', this.encontrarPlatos);
         this.el.on('click', '.platoP', this.mostrarPlato);
     };
     this.render = function() {
