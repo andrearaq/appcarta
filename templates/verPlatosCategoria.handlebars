@@ -24,7 +24,7 @@
         <div class="platoG"> 
             {{#.}}
                 <img class="platogrande" id="fotoplato" src="img/{{imagen}}"/>
-                <span class="precio" id="precioplato">{{precio}} €</span>
+                <span id="precioplato">{{precio}} €</span>
                 <p id="textoplato">{{nomplato}}</p>
                 {{#if alergenos}}
                     <span id="ale"><img id="alergenos" src="img/{{alergenos}}"/></span>
@@ -36,7 +36,7 @@
 
             {{#.}}
               <div class="plato2">
-                 <img class="platoP" src="img/{{imagen}}" alt="{{nomplato}}" />
+                  <img class="platoP" src="img/{{imagen}}" alt="{{nomplato}}" />
                   <span class="precio3"> {{precio}} €</span>
                  {{#if alergenos}}
                     <img id="alerg" src="img/{{alergenos}}"/>
@@ -47,8 +47,8 @@
             {{/.}}
 
         </div>
-
     </div>
+    
     <footer>
      <h3>Copyright @Restaurante Antonio 2015</h3>
     </footer>
