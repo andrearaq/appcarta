@@ -2,14 +2,19 @@
 @media screen
     and (device-width: 1024px)
     and (device-height: 600px)
-    and (orientation: portrait) {
+  /*  and (device-width: 1280px)
+    and (device-height: 800px)*/
+    and (orientation: portrait) {       /* orientacion vertical */
         
     .imginicio {
-        width: 580px;
-        heigth: 290px;
+        width: 570px;
+      /*  height: 290px;*/
     }
     #direccion {
         display: none;
+    }
+    #direcc {
+        display: inline;
     }
     .idiomas img {
         margin-top: 15px;
@@ -19,17 +24,30 @@
     .topcoat-navigation-bar__title {
       font-size: 1.6rem;
     }
+    .third {
+        width: 28%;
+    }
+    .vermenu {
+        padding: 0px;
+    }
 }
 @media screen
     and (device-width: 1024px)
     and (device-height: 600px)
-    and (orientation: landscape) {
+/*    and (device-width: 1280px)
+    and (device-height: 800px)*/
+    and (orientation: landscape) {   /* orientacion horizontal */
         
     .imginicio {
         width: 800px;
-        heigth: 290px;
+        height: 310px;
     }   
-        
+    .conjunto {
+        margin-left: 10%;
+    }
+    #direcc {
+        display: none;
+    }
 }
 
 /*Añadimos para que el header no haga scroll:*/
@@ -60,7 +78,12 @@
 .flagG{
     max-width: 100%;
 }
-
+#direccion {
+    margin-right: 5%;
+}
+#direcc {
+    display: none;
+}
 /* clases de la vista categorias */
 .conjunto {
     text-align: center;
@@ -215,6 +238,9 @@
 
 
 /* clases y elementos generales usados en varias vistas */
+body {
+    margin: 0 auto;
+}
 a {
     text-decoration: none;
     color: inherit;	
@@ -229,6 +255,12 @@ footer {
     margin-top: 1%;
     border-top: 1px solid #595b5b;
 }
+.less-half {
+    width: 37%;
+}
+.half-quarter {
+    width: 15%;
+}
 .idiomas {
     margin-left: 5%;
 }   
@@ -238,7 +270,6 @@ footer {
     max-width: 100%;
 }
 .idiomas img:hover {
-/*.flag:hover {*/
     border: 1px solid #58ACFA;
     padding: 1px;
 }
