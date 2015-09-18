@@ -86,7 +86,7 @@
         if (match) {
             idioma = localStorage['idioma'];
             menu = match[1];
-            var m = parseInt(menu)-40;
+            var m = parseInt(menu)-50;
             adapter.encontrarMenusIdioma(idioma, parseInt(m)).done(function(menus) {
                 $('body').html(new VerMenu(adapter, menus).render());
             });
