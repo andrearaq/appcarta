@@ -53,6 +53,7 @@
 /*Añadimos para que el header no haga scroll:*/
 .scroller {
     overflow: auto;
+    background-color: #454646;
 /*iOS 4 or lower required an esoteric two finger gesture to scroll elements but normality was achieved from iOS 5. Unlike other browsers, while overflow:auto works, momentum scrolling is disabled unless you also add -webkit-overflow-scrolling: touch.*/
     -webkit-overflow-scrolling: touch;
     position: absolute;
@@ -145,6 +146,7 @@
 
 /* clases vista verPlatosCategoria */
 .verplatos {
+    background-color: #454646;
     text-align: left;
     max-width: 100%;
 }
@@ -235,7 +237,15 @@
 #numcateg {
     display: none;
 }
-
+#alerrac {
+    width: 35%;
+    height: 35%;
+    margin-right: 10px;
+    margin-top: 5%;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+}
 
 /* clases y elementos generales usados en varias vistas */
 body {

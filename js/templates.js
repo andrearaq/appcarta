@@ -226,7 +226,11 @@ function program3(depth0,data) {
   if (helper = helpers.precio) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.precio); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + " € </span> </p> \r\n              </li>\r\n            ";
+    + " € </span> </p>\r\n                    <p><img id=\"alerrac\" src=\"img/";
+  if (helper = helpers.alergenos) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.alergenos); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\"/></p>\r\n              </li>\r\n            ";
   return buffer;
   }
 
