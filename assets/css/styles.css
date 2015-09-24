@@ -1,28 +1,21 @@
 /* media queries */
-@media all
-  /*  and (device-width: 1024px)
-    and (device-height: 600px)*/
-  /*  and (device-width: 1280px)
-    and (device-height: 800px)*/
-    and (orientation: portrait) {       /* orientacion vertical */
+@media all and (orientation: portrait) {       /* orientacion vertical */
         
     .imginicio {
        width: 570px;
-     /*  height: 290px;*/
+     
     }
-    #direccion {
+    .direccion {
         display: none;
-    }
-    #direcc {
-        display: inherit;
     }
     .idiomas img {
         margin-top: 15px;
         margin-left: 5px;
-        max-width: 70%;
+        width: 40px;
+        height: 31px;
     }
     .topcoat-navigation-bar__title {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
     }
     .third {
         width: 28%;
@@ -39,13 +32,9 @@
         max-width: 95%;
     }
     #alerrac {
-        max-height: 100%;
-        max-width: 100%;
         margin-right: 10px;
-        margin-top: 5%;
     }
     #precioplato {
-     /*   margin-left: 5px;*/
         margin-right: 13%;
     }
     .platogrande {
@@ -57,23 +46,24 @@
     }
     .platoG {
         width: 70%;
-        height: 700px;
+        height: 350px;
     }
     .listaplatos{
         width: 20%;
-        height: 700px;
+        height: 350px;
+    }
+    .logo {
+        display: none;
+    }
+    #direcc {
+        display: inherit;
     }
 }
-@media all
-  /*  and (device-width: 1024px)
-    and (device-height: 600px)*/
-/*    and (device-width: 1280px)
-    and (device-height: 800px)*/
-    and (orientation: landscape) {   /* orientacion horizontal */
+@media all  and (orientation: landscape) {   /* orientacion horizontal */
         
     .imginicio {
-        width: 800px;
-        height: 310px;
+        width: 600px;
+        height: 260px;
     }   
     .conjunto {
         margin-left: 0;
@@ -84,7 +74,7 @@
     .idiomas img {
         margin-left: 7px;
         margin-top: 15px;
-        max-width: 100%;
+        max-width: 90%;
     }
     .imgboton {
         width: 280px;
@@ -99,11 +89,9 @@
         padding: 4px;
         margin: 2px;
         max-width: 100%;
-        max-height: 80%;
+        max-height: 75%;
     }
     #alerrac {
-        width: 40%;
-        height: 40%;
         margin-right: 10px;
         margin-top: 4%;
     }
@@ -118,6 +106,12 @@
     .listaplatos{
         width: 20%;
         height: 400px;
+    }
+    .logo {
+        display: inherit;
+    }
+    #alergenos {
+       height: 35px;
     }
 }
 
@@ -151,16 +145,14 @@
 .flagG{
     max-width: 100%;
 }
-#direccion {
+.direccion {
     margin-right: 5%;
-}
-#direcc {
-    display: none;
 }
 /* clases de la vista categorias */
 .conjunto {
     text-align: center;
     max-width: 100%;
+    margin-left: 5px;
 }
 /* flecha next */
 .chevron {
@@ -225,7 +217,7 @@
     float: left;
     overflow: hidden;
     text-align: center;
-    margin-top: 17px;
+    margin-top: 12px;
 }
 .platoG p {
     margin-top: 5px;
@@ -234,7 +226,7 @@
 .listaplatos{
     margin: 0px;
     padding: 0px;
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
     float: left;
     overflow: auto;
@@ -288,7 +280,6 @@
 #alergenos {
     text-align: left;
     margin-top: 1px;
-    max-width: 90%;
 }
 #precioplato {
     color: #58ACFA;
@@ -299,6 +290,8 @@
     display: none;
 }
 #alerrac {
+    width: 400px;
+    height: 35px;
     border: 0;
     padding: 0;
     border-radius: 0;
