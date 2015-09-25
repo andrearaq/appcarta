@@ -14,7 +14,7 @@
         height: 31px;
     }
     .topcoat-navigation-bar__title {
-      font-size: 1.0rem;
+      font-size: 20px;
     }
     .third {
         width: 28%;
@@ -57,7 +57,7 @@
         height: 375px;
     }
     .logo {
-        display: none;
+       display: none;
     }
     #direcc {
         display: inherit;
@@ -67,12 +67,15 @@
         margin-left: 0;
         margin-right: 0px;
     }
+    .flagG{
+        max-width: 100%;
+    }
 }
 @media all  and (orientation: landscape) {   /* orientacion horizontal */
         
     .imginicio {
-        width: 580px;
-        height: 200px;
+        width: 560px;
+        height: 170px;
     }   
     .conjunto {
         margin-left: 0;
@@ -106,7 +109,7 @@
     }
     #precioplato {
         margin-left: 5px;
-        margin-right: 9%;
+        margin-right: 10px;
     }
     .platoG {
         width: 80%;
@@ -114,14 +117,18 @@
     }
     .listaplatos{
         width: 20%;
-        height: 420px;
+        height: 425px;
     }
     .logo {
         display: inherit;
     }
     #alergenos {
        height: 35px;
+        margin-top: 1px;
        margin-bottom: 15px;
+    }
+    .flagG{
+        max-width: 70%;
     }
 }
 
@@ -152,10 +159,7 @@
     max-width: 100%;
     height: 310px;
 }
-.flagG{
-    max-width: 80%;
-}
-.direccion {
+.dreccion {
     margin-right: 5%;
 }
 /* clases de la vista categorias */
@@ -314,6 +318,7 @@
 /* clases y elementos generales usados en varias vistas */
 body {
     margin: 0 auto;
+    background-color: #4B4D4E;
 }
 a {
     text-decoration: none;
@@ -327,9 +332,10 @@ footer {
     color: #D8D8D8;
     background-color: #4B4D4E;
     clear: both;
-    margin-top: 1%;
+    margin-top: 1px;
     border-top: 1px solid #595b5b;
     height: 3.969rem;
+    vertical-align: middle;
 }
 .less-half {
     width: 37%;

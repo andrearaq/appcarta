@@ -31,7 +31,7 @@ function program1(depth0,data) {
   buffer += "<div class=\"topcoat-navigation-bar\">\r\n     <div class=\"topcoat-navigation-bar__item left half-quarter\">\r\n        <a class=\"topcoat-icon-button--quiet back-button\" href=\"#\">\r\n             <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n        </a>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center less-half\">\r\n        <h1 class=\"topcoat-navigation-bar__title\">Carta Restaurante Antonio</h1>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center third idiomas\">\r\n        <img id=\"1\" src=\"img/es.png\"/>\r\n        <img id=\"2\" src=\"img/ukp.png\"/>\r\n        <img id=\"3\" src=\"img/fr.png\"/>\r\n        <img id=\"4\" src=\"img/it.png\"/>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center half-quarter\">\r\n        <img class=\"logo\" src=\"img/logo2.png\"/>\r\n    </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"conjunto\">\r\n        ";
   stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data}));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  buffer += "\r\n    </div>\r\n    <footer>\r\n      <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
   return buffer;
   });
 templates['home'] = template(function (Handlebars,depth0,helpers,partials,data) {
