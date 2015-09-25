@@ -240,7 +240,7 @@ function program3(depth0,data) {
   buffer += "\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center third idiomas\">\r\n            <img id=\"1\" src=\"img/es.png\" alt=\"Raciones\"/>\r\n            <img id=\"2\" src=\"img/ukp.png\" alt=\"Servings\"/>\r\n            <img id=\"3\" src=\"img/fr.png\" alt=\"Portions\"/>\r\n            <img id=\"4\" src=\"img/it.png\" alt=\"Porzioni\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center half-quarter\">\r\n            <img class=\"logo\" src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n            ";
   stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data}));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n      <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
   return buffer;
   });
 templates['verPlatosCategoria'] = template(function (Handlebars,depth0,helpers,partials,data) {

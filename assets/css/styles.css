@@ -3,7 +3,6 @@
         
     .imginicio {
        width: 570px;
-     
     }
     .direccion {
         display: none;
@@ -15,7 +14,7 @@
         height: 31px;
     }
     .topcoat-navigation-bar__title {
-      font-size: 1.1rem;
+      font-size: 1.0rem;
     }
     .third {
         width: 28%;
@@ -34,8 +33,13 @@
     #alerrac {
         margin-right: 10px;
     }
+    #alergenos {
+       height: 35px;
+       margin-bottom: 95px;
+    }
     #precioplato {
-        margin-right: 13%;
+        fonto-size: 25px;
+        margin-right: 5%;
     }
     .platogrande {
         border: 3px solid #D8D8D8;
@@ -45,12 +49,12 @@
         max-height: 100%;
     }
     .platoG {
-        width: 70%;
-        height: 350px;
+        width: 75%;
+        height: 375px;
     }
     .listaplatos{
         width: 20%;
-        height: 350px;
+        height: 375px;
     }
     .logo {
         display: none;
@@ -58,12 +62,17 @@
     #direcc {
         display: inherit;
     }
+    .precio3 {
+        font-size: 18px;
+        margin-left: 0;
+        margin-right: 0px;
+    }
 }
 @media all  and (orientation: landscape) {   /* orientacion horizontal */
         
     .imginicio {
-        width: 600px;
-        height: 260px;
+        width: 580px;
+        height: 200px;
     }   
     .conjunto {
         margin-left: 0;
@@ -97,21 +106,22 @@
     }
     #precioplato {
         margin-left: 5px;
-        margin-right: 3%;
+        margin-right: 9%;
     }
     .platoG {
-        width: 70%;
-        height: 400px;
+        width: 80%;
+        height: 425px;
     }
     .listaplatos{
         width: 20%;
-        height: 400px;
+        height: 420px;
     }
     .logo {
         display: inherit;
     }
     #alergenos {
        height: 35px;
+       margin-bottom: 15px;
     }
 }
 
@@ -143,7 +153,7 @@
     height: 310px;
 }
 .flagG{
-    max-width: 100%;
+    max-width: 80%;
 }
 .direccion {
     margin-right: 5%;
@@ -152,7 +162,7 @@
 .conjunto {
     text-align: center;
     max-width: 100%;
-    margin-left: 5px;
+    margin-left: 8px;
 }
 /* flecha next */
 .chevron {
@@ -217,16 +227,16 @@
     float: left;
     overflow: hidden;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 5px;
 }
 .platoG p {
-    margin-top: 5px;
+    margin-top: 3px;
     margin-bottom: 1px;
 }
 .listaplatos{
     margin: 0px;
     padding: 0px;
-    margin-top: 15px;
+    margin-top: 7px;
     text-align: center;
     float: left;
     overflow: auto;
@@ -267,7 +277,9 @@
 }
 #textoplato {
     color: #FFF;
-    font-size: 19px;
+    font-size: 17px;
+    max-width: 90%;
+    margin-left: 5px;
 }
 #alerg {
     display: none;
@@ -276,10 +288,12 @@
     text-align: left !important;
     margin-top: 0px;
     margin-left: 0px;
+    left: 5px;
 }
 #alergenos {
     text-align: left;
     margin-top: 1px;
+    left: 5px;
 }
 #precioplato {
     color: #58ACFA;
@@ -290,7 +304,7 @@
     display: none;
 }
 #alerrac {
-    width: 400px;
+  /*  width: 400px;*/
     height: 35px;
     border: 0;
     padding: 0;
@@ -311,6 +325,7 @@ footer {
     position: static;
     text-align: center;
     color: #D8D8D8;
+    background-color: #4B4D4E;
     clear: both;
     margin-top: 1%;
     border-top: 1px solid #595b5b;
