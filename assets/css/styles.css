@@ -14,7 +14,10 @@
         height: 31px;
     }
     .topcoat-navigation-bar__title {
-      font-size: 20px;
+      font-size: 1.2rem;
+    }
+    #titcarta {
+      font-size: 21px;
     }
     .third {
         width: 28%;
@@ -37,8 +40,11 @@
        height: 35px;
        margin-bottom: 95px;
     }
+     #ale {
+        margin-left: 10px;
+     }
     #precioplato {
-        fonto-size: 25px;
+        font-size: 22px;
         margin-right: 5%;
     }
     .platogrande {
@@ -50,7 +56,7 @@
     }
     .platoG {
         width: 75%;
-        height: 375px;
+        height: 380px;
     }
     .listaplatos{
         width: 20%;
@@ -63,22 +69,31 @@
         display: inherit;
     }
     .precio3 {
-        font-size: 18px;
+        font-size: 16px;
         margin-left: 0;
         margin-right: 0px;
     }
     .flagG{
         max-width: 100%;
     }
+    .nomplato {
+        font-size: 23px;
+    }
+    .precio {
+        font-size: 28px;
+    }
+    #textoplato {
+        font-size: 18px;
+    }
 }
 @media all  and (orientation: landscape) {   /* orientacion horizontal */
         
     .imginicio {
-        width: 560px;
-        height: 170px;
+        width: 700px;
+        height: 250px;
     }   
     .conjunto {
-        margin-left: 0;
+        margin-left: 12px;
     }
     #direcc {
         display: none;
@@ -108,27 +123,39 @@
         margin-top: 4%;
     }
     #precioplato {
+        font-size: 30px;
         margin-left: 5px;
-        margin-right: 10px;
+        margin-right: 90px;
+    }
+    .precio3 {
+        font-size: 18px;        
+        margin-right: 25px;
     }
     .platoG {
         width: 80%;
-        height: 425px;
+        height: 435px;
     }
     .listaplatos{
         width: 20%;
-        height: 425px;
+        height: 435px;
     }
     .logo {
         display: inherit;
     }
     #alergenos {
-       height: 35px;
-        margin-top: 1px;
-       margin-bottom: 15px;
+       height: 34px;
+       margin-top: 1px;
+       margin-bottom: 16px;
     }
     .flagG{
-        max-width: 70%;
+        max-width: 85%;
+        max-height: 85%;
+    }
+    .precio {
+        font-size: 32px;
+    }
+    #textoplato {
+        font-size: 20px;
     }
 }
 
@@ -156,8 +183,6 @@
     margin-top: 2%;
     margin-bottom: 2%;
     border: 3px solid #D8D8D8;
-    max-width: 100%;
-    height: 310px;
 }
 .dreccion {
     margin-right: 5%;
@@ -231,22 +256,20 @@
     float: left;
     overflow: hidden;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 .platoG p {
-    margin-top: 3px;
+    margin-top: 2px;
     margin-bottom: 1px;
 }
 .listaplatos{
     margin: 0px;
     padding: 0px;
-    margin-top: 7px;
+    margin-top: 4px;
     text-align: center;
     float: left;
     overflow: auto;
     border-top: 4px solid #A4A4A4;
-   /* border-bottom: 4px solid #A4A4A4;*/
-  /*  border: 8px solid #A4A4A4;*/
 }
 .plato2 {
     padding: 6px;
@@ -269,10 +292,8 @@
     opacity: 1;
 }
 .precio3 {
-    font-size: 22px;
     float: right;
     margin-left: 0;
-    margin-right: 25px;
     color: #fff;
 }
 .nomplato2 {
@@ -281,18 +302,16 @@
 }
 #textoplato {
     color: #FFF;
-    font-size: 17px;
-    max-width: 90%;
-    margin-left: 5px;
+    max-width: 85%;
+    margin-left: 7px;
 }
 #alerg {
     display: none;
 }
 #ale {
     text-align: left !important;
-    margin-top: 0px;
-    margin-left: 0px;
-    left: 5px;
+    margin-top: 4px;
+    margin-left: 40px;
 }
 #alergenos {
     text-align: left;
@@ -301,14 +320,12 @@
 }
 #precioplato {
     color: #58ACFA;
-    font-size: 30px;
     float: right;
 }
 #numcateg {
     display: none;
 }
 #alerrac {
-  /*  width: 400px;*/
     height: 35px;
     border: 0;
     padding: 0;
@@ -371,9 +388,10 @@ footer {
 /*Las imágenes en la lista, con un ancho fijo, y el texto a su derecha:*/
 .list > li img {
     width: 230px;
-    height: 170px;
+    height: 160px;
     float: left;
     margin-right: 8px;
+    margin-bottom: 3px;
     border: 2px solid #D8D8D8;
     padding: 4px;
     border-radius: 6px;
@@ -388,7 +406,6 @@ footer {
 }
 .precio {
     color: #FFF;
-    font-size: 32px;
     float: right;
     margin-right: 10px;
 }
