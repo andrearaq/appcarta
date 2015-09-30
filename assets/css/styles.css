@@ -85,6 +85,9 @@
     #textoplato {
         font-size: 18px;
     }
+    .conjunto {
+        margin-left: 12px;
+    }
 }
 @media all  and (orientation: landscape) {   /* orientacion horizontal */
         
@@ -93,7 +96,7 @@
         height: 250px;
     }   
     .conjunto {
-        margin-left: 12px;
+        margin-left: 16px;
     }
     #direcc {
         display: none;
@@ -191,7 +194,6 @@
 .conjunto {
     text-align: center;
     max-width: 100%;
-    margin-left: 8px;
 }
 /* flecha next */
 .chevron {
