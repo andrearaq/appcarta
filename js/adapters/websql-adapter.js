@@ -100,7 +100,7 @@ var WebSqlAdapter = function () {
         );
         return deferred.promise();
     };
-    // encontrar el menu segun el idioma
+    // encontrar el menu segun el idioma"
     this.encontrarMenusIdioma = function (id, menu) {
         var deferred = $.Deferred();
         this.db.transaction(
@@ -108,21 +108,22 @@ var WebSqlAdapter = function () {
                 switch(id) {
                     case "1":  // castellano
                         var sql = "SELECT a.id, a.castellano AS fotomenu, a.precio, b.castellano AS nommenu"+
-                            " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+50)";
+                            " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+51)";
                         break;
                     case "2":  // ingles
                         var sql = "SELECT a.id, a.ingles AS fotomenu, a.precio, b.ingles AS nommenu"+
-                            " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+50)";
+                            " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+51)";
                         break;
                     case "3":  // frances
                         var sql = "SELECT a.id, a.frances as fotomenu, a.precio, b.frances AS nommenu"+
-                            " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+50)";
+                            " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+51)";
                         break;                    
-                    case "4":  // igialiano
+                    case "4":  // itialiano
                         var sql = "SELECT a.id, a.italiano as fotomenu, a.precio, b.italiano AS nommenu"+
-                            " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+50)";
+                            " FROM menus as a, platos as b WHERE a.id=? AND b.id = (a.id+51)";
                         break; 
                 }
+                menu = menu - 1; // esta variable trae de valor 1 a 4, pero los menus en la tabla van de 0 a 3
                 tx.executeSql(sql, [menu], function (tx, results) {
                     deferred.resolve(results.rows.length === 1 ? results.rows.item(0) : null);
                 });
