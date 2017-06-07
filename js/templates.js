@@ -31,7 +31,7 @@ function program1(depth0,data) {
   buffer += "<div class=\"topcoat-navigation-bar\">\r\n     <div class=\"topcoat-navigation-bar__item left half-quarter\">\r\n        <a class=\"topcoat-icon-button--quiet back-button\" href=\"#\">\r\n             <span class=\"topcoat-icon topcoat-icon--back\"></span>\r\n        </a>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center less-half\">\r\n        <h1 class=\"topcoat-navigation-bar__title\" id=\"titcarta\">Carta Restaurante Antonio</h1>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center third idiomas\">\r\n        <img id=\"1\" src=\"img/es.png\"/>\r\n        <img id=\"2\" src=\"img/ukp.png\"/>\r\n        <img id=\"3\" src=\"img/fr.png\"/>\r\n        <img id=\"4\" src=\"img/it.png\"/>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center half-quarter\">\r\n        <img class=\"logo\" src=\"img/logo2.png\"/>\r\n    </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"conjunto\">\r\n        ";
   stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data}));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n    </div>\r\n    <footer>\r\n      <h3>Copyright @Restaurante Antonio 2016</h3>\r\n    </footer>\r\n</div>";
+  buffer += "\r\n    </div>\r\n    <footer>\r\n      <h3>Copyright @Restaurante Antonio 2017</h3>\r\n    </footer>\r\n</div>";
   return buffer;
   });
 templates['home'] = template(function (Handlebars,depth0,helpers,partials,data) {
@@ -40,7 +40,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"topcoat-navigation-bar\">\r\n    <span><img src=\"img/logo2.png\"/></span>\r\n    <div class=\"topcoat-navigation-bar__item center two-thirds\">\r\n        <h1 class=\"topcoat-navigation-bar__title\">Carta de Restaurante Antonio</h1>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center\">\r\n        <img class=\"direccion\" src=\"img/direccion.png\"/>\r\n    </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"inicio\">\r\n       <img class=\"imginicio\" src=\"img/Pared.jpg\"/>\r\n    </div>\r\n    <div class=\"topcoat-button-bar full\">\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/1'><button class=\"topcoat-button-bar__button full\" id=\"es\"><img class=\"flagG\" src=\"img/Spain.png\"/></button></a>\r\n       </div>\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/2'><button class=\"topcoat-button-bar__button full\" id=\"uk\"><img class=\"flagG\" src=\"img/UK.png\"/></button></a>\r\n       </div>\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/3'><button class=\"topcoat-button-bar__button full\" id=\"fr\"><img class=\"flagG\" src=\"img/France.png\"/></button></a>\r\n       </div>\r\n        <div class=\"topcoat-button-bar__item\">\r\n          <a href='#categorias/4'><button class=\"topcoat-button-bar__button full\" id=\"it\"><img class=\"flagG\" src=\"img/Italy.png\"/></button></a>\r\n       </div>\r\n    </div>\r\n\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n     <h3 id=\"direcc\" >Plaza San Pedro Nolasco, 5  --  Tf. 976 39 74 74</h3>\r\n    </footer>\r\n</div>";
+  return "<div class=\"topcoat-navigation-bar\">\r\n    <span><img src=\"img/logo2.png\"/></span>\r\n    <div class=\"topcoat-navigation-bar__item center two-thirds\">\r\n        <h1 class=\"topcoat-navigation-bar__title\">Carta de Restaurante Antonio</h1>\r\n    </div>\r\n    <div class=\"topcoat-navigation-bar__item center\">\r\n        <img class=\"direccion\" src=\"img/direccion.png\"/>\r\n    </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"inicio\">\r\n       <img class=\"imginicio\" src=\"img/Pared.jpg\"/>\r\n    </div>\r\n    <div class=\"topcoat-button-bar full\">\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/1'><button class=\"topcoat-button-bar__button full\" id=\"es\"><img class=\"flagG\" src=\"img/Spain.png\"/></button></a>\r\n       </div>\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/2'><button class=\"topcoat-button-bar__button full\" id=\"uk\"><img class=\"flagG\" src=\"img/UK.png\"/></button></a>\r\n       </div>\r\n       <div class=\"topcoat-button-bar__item\">\r\n         <a href='#categorias/3'><button class=\"topcoat-button-bar__button full\" id=\"fr\"><img class=\"flagG\" src=\"img/France.png\"/></button></a>\r\n       </div>\r\n        <div class=\"topcoat-button-bar__item\">\r\n          <a href='#categorias/4'><button class=\"topcoat-button-bar__button full\" id=\"it\"><img class=\"flagG\" src=\"img/Italy.png\"/></button></a>\r\n       </div>\r\n    </div>\r\n\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2017</h3>\r\n     <h3 id=\"direcc\" >Plaza San Pedro Nolasco, 5  --  Tf. 976 39 74 74</h3>\r\n    </footer>\r\n</div>";
   });
 templates['verBebidas'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
@@ -83,7 +83,7 @@ function program3(depth0,data) {
   buffer += "\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center third idiomas\">\r\n        <img id=\"1\" src=\"img/es.png\" alt=\"Bebidas\"/>\r\n        <img id=\"2\" src=\"img/ukp.png\" alt=\"Drinks\"/>\r\n        <img id=\"3\" src=\"img/fr.png\" alt=\"Boissons\"/>\r\n        <img id=\"4\" src=\"img/it.png\" alt=\"Bevande\"/>\r\n    </div>\r\n       <div class=\"topcoat-navigation-bar__item center half-quarter\">\r\n            <img class=\"logo\" src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n            ";
   stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data}));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2017</h3>\r\n    </footer>\r\n</div>";
   return buffer;
   });
 templates['verBebidasTerraza'] = template(function (Handlebars,depth0,helpers,partials,data) {
@@ -123,7 +123,7 @@ function program3(depth0,data) {
   buffer += "\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center third idiomas\">\r\n        <img id=\"1\" src=\"img/es.png\" alt=\"Bebidas Terraza\"/>\r\n        <img id=\"2\" src=\"img/ukp.png\" alt=\"Terrace drinks\"/>\r\n        <img id=\"3\" src=\"img/fr.png\" alt=\"Boissons terrasse\"/>\r\n        <img id=\"4\" src=\"img/it.png\" alt=\"Bevande terraza\"/>\r\n    </div>\r\n       <div class=\"topcoat-navigation-bar__item center half-quarter\">\r\n            <img class=\"logo\" src=\"img/logo2.png\"/>\r\n        </div>\r\n</div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n            ";
   stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data}));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2017</h3>\r\n    </footer>\r\n</div>";
   return buffer;
   });
 templates['verMenu'] = template(function (Handlebars,depth0,helpers,partials,data) {
@@ -144,7 +144,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.fotomenu) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.fotomenu); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\" />\r\n    </div>\r\n\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+    + "\" />\r\n    </div>\r\n\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2017</h3>\r\n    </footer>\r\n</div>";
   return buffer;
   });
 templates['verMenus'] = template(function (Handlebars,depth0,helpers,partials,data) {
@@ -192,7 +192,7 @@ function program3(depth0,data) {
   buffer += "\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center third idiomas\">\r\n            <img id=\"1\" src=\"img/es.png\" alt=\"Menus\"/>\r\n            <img id=\"2\" src=\"img/ukp.png\" alt=\"Menu\"/>\r\n            <img id=\"3\" src=\"img/fr.png\" alt=\"Menus\"/>\r\n            <img id=\"4\" src=\"img/it.png\" alt=\"Menus\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center half-quarter\">\r\n            <img class=\"logo\" src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n            ";
   stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data}));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2017</h3>\r\n    </footer>\r\n</div>";
   return buffer;
   });
 templates['verOtraCategoria'] = template(function (Handlebars,depth0,helpers,partials,data) {
@@ -240,7 +240,7 @@ function program3(depth0,data) {
   buffer += "\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center third idiomas\">\r\n            <img id=\"1\" src=\"img/es.png\" alt=\"Raciones\"/>\r\n            <img id=\"2\" src=\"img/ukp.png\" alt=\"Servings\"/>\r\n            <img id=\"3\" src=\"img/fr.png\" alt=\"Portions\"/>\r\n            <img id=\"4\" src=\"img/it.png\" alt=\"Porzioni\"/>\r\n        </div>\r\n       <div class=\"topcoat-navigation-bar__item center half-quarter\">\r\n            <img class=\"logo\" src=\"img/logo2.png\"/>\r\n        </div>\r\n    </div>\r\n<div class=\"scroller\">\r\n    <div class=\"topcoat-list\">\r\n        <ul class=\"topcoat-list__container list\" >\r\n            ";
   stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data}));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n      <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  buffer += "\r\n      </ul>\r\n    </div>\r\n    <footer>\r\n      <h3>Copyright @Restaurante Antonio 2017</h3>\r\n    </footer>\r\n</div>";
   return buffer;
   });
 templates['verPlatosCategoria'] = template(function (Handlebars,depth0,helpers,partials,data) {
@@ -340,7 +340,7 @@ function program7(depth0,data) {
   buffer += "\r\n\r\n        </div>\r\n        <div class=\"listaplatos\">\r\n\r\n            ";
   stack1 = ((stack1 = (typeof depth0 === functionType ? depth0.apply(depth0) : depth0)),blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(6, program6, data),data:data}));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n\r\n        </div>\r\n    </div>\r\n    \r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2015</h3>\r\n    </footer>\r\n</div>";
+  buffer += "\r\n\r\n        </div>\r\n    </div>\r\n    \r\n    <footer>\r\n     <h3>Copyright @Restaurante Antonio 2017</h3>\r\n    </footer>\r\n</div>";
   return buffer;
   });
 })();
